@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پیدا کردن خانه در مادرید | گروه نوارکسیوم</title>
+<meta name="description" content="فرم درخواست پیدا کردن خانه در مادرید — گروه نوارکسیوم. اطلاعات خانواده، نوع خانه، محله، بودجه و زمان نقل‌مکان را وارد کنید تا خانه مناسب شما را پیدا کنیم.">
+<meta name="theme-color" content="#2A211C">
+<link rel="canonical" href="https://novarexium.com/housing.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Novarexium Group">
+<meta property="og:title" content="پیدا کردن خانه در مادرید | گروه نوارکسیوم">
+<meta property="og:description" content="چند سوال ساده درباره خانواده، نوع خانه، محله و بودجه‌تان؛ ما خانه مناسب شما را در مادرید پیدا می‌کنیم.">
+<meta property="og:url" content="https://novarexium.com/housing.html">
+<meta property="og:image" content="https://novarexium.com/new-home.jpg">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Estedad:wght@500;700;800&family=Vazirmatn:wght@400;500;600;700;800&family=Young+Serif&family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night: #2A211C; --night-2: #3B2E26;
+  --peach: #F1E4D3; --saffron: #B98A5E; --saffron-2: #D9B68F; --saffron-dk: #8A6240;
+  --ivory: #F7F2EB; --sand: #EFE6DA; --sage: #EAE2D7; --teal: #6E4E36;
+  --ink: #2B2420; --body: #54483F; --muted: #7A6C61; --line: #E6DACB; --white: #FFFFFF;
+  --f-display: 'Estedad', 'Vazirmatn', sans-serif; --f-body: 'Vazirmatn', system-ui, sans-serif;
+  --r-sm: 14px; --r-md: 22px; --r-lg: 32px;
+  --sh-1: 0 1px 2px rgba(42,33,28,.05), 0 8px 24px -10px rgba(42,33,28,.16);
+  --sh-2: 0 2px 4px rgba(42,33,28,.06), 0 24px 60px -20px rgba(42,33,28,.3);
+  --ease: cubic-bezier(.22,.8,.3,1); --wrap: 1120px; --hdr: 74px;
+}
+html[lang="en"] { --f-display: 'Young Serif', Georgia, serif; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { overflow-x: clip; }
+body { font-family: var(--f-body); font-size: 17px; line-height: 1.85; color: var(--body); background: var(--ivory); -webkit-font-smoothing: antialiased; }
+html[lang="en"] body { line-height: 1.65; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+.ic { width: 22px; height: 22px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; border-radius: 8px; }
+.display { font-family: var(--f-display); font-weight: 800; color: var(--ink); line-height: 1.45; letter-spacing: -0.01em; }
+html[lang="en"] .display { font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; }
+h3 { font-size: 20px; font-weight: 700; color: var(--ink); line-height: 1.5; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(247,242,235,.95); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); }
+.hdr { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: var(--hdr); }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.mark { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0; background: radial-gradient(circle at 35% 30%, #FFFFFF, #F1E8DC 70%); box-shadow: 0 0 0 1.5px rgba(185,138,94,.7), 0 6px 16px -6px rgba(42,33,28,.45); }
+.mark svg { width: 30px; height: 30px; }
+.brand-txt { display: flex; flex-direction: column; direction: ltr; }
+.brand-name { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: .2em; font-size: 16px; line-height: 1.3; }
+.brand-sub { display: flex; align-items: center; gap: 6px; font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: .42em; color: var(--saffron-dk); line-height: 1.4; }
+.brand-sub::before, .brand-sub::after { content: ''; height: 1px; flex: 1; background: currentColor; opacity: .6; }
+.hdr-actions { display: flex; align-items: center; gap: 8px; }
+.pill-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; background: var(--white); box-shadow: inset 0 0 0 1px var(--line); border: 0; font-size: 14.5px; font-weight: 700; color: var(--ink); text-decoration: none; cursor: pointer; transition: box-shadow .2s, background-color .2s; }
+.pill-btn:hover { box-shadow: inset 0 0 0 1.5px var(--saffron); }
+html[dir="ltr"] .back .ic { transform: scaleX(-1); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 28px; border-radius: 999px; font-size: 16px; font-weight: 700; text-decoration: none; cursor: pointer; border: 0; transition: transform .2s var(--ease), box-shadow .3s, background-color .2s; }
+.btn:active { transform: scale(.97); }
+.btn--gold { background: linear-gradient(135deg, var(--saffron-2), var(--saffron) 60%, #A0744C); color: #2A1D14; box-shadow: 0 10px 28px -10px rgba(185,138,94,.75); }
+.btn--gold:hover { box-shadow: 0 16px 40px -12px rgba(185,138,94,.9); }
+.btn--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px rgba(43,36,32,.25); }
+.btn--line:hover { box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn .ic { width: 20px; height: 20px; }
+.btn[disabled] { opacity: .65; cursor: progress; }
+
+/* Hero */
+.h-hero { background: linear-gradient(180deg, #1C1511, #3B2E26 70%, #5B4537); color: #E9DED2; padding: 64px 0 120px; position: relative; overflow: hidden; }
+.h-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 80px; background: var(--ivory); border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+.h-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; position: relative; z-index: 1; }
+.h-hero h1 { color: var(--ivory); font-size: clamp(32px, 4vw, 52px); margin-bottom: 16px; }
+.h-hero .lead { font-size: 18.5px; color: #D9CBBD; max-width: 54ch; margin-bottom: 28px; }
+.h-steps { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.h-steps li { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(255,255,255,.15); font-size: 14.5px; }
+.h-steps b { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: var(--saffron-2); color: var(--night); font-size: 12.5px; }
+.h-art { position: relative; }
+.h-art img { border-radius: 999px 999px 24px 24px; aspect-ratio: 4 / 4.4; object-fit: cover; box-shadow: 0 30px 70px -25px rgba(0,0,0,.7); }
+.h-art::before { content: ""; position: absolute; inset: -14px; border: 1.5px solid var(--saffron-2); border-radius: 999px 999px 32px 32px; opacity: .7; }
+
+/* Wizard */
+.wizard-sec { margin-top: -40px; position: relative; z-index: 2; padding-bottom: 96px; }
+.wizard { background: var(--white); border-radius: var(--r-lg); box-shadow: var(--sh-2); padding: 44px clamp(20px, 4vw, 52px); }
+.progress { margin-bottom: 36px; }
+.p-labels { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 12px; }
+.p-labels li { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); font-weight: 600; line-height: 1.4; }
+.p-labels .n { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; background: var(--sand); color: var(--saffron-dk); font-weight: 800; font-size: 14px; transition: background-color .3s, color .3s; }
+.p-labels li.is-on { color: var(--ink); }
+.p-labels li.is-on .n, .p-labels li.is-done .n { background: var(--night); color: var(--saffron-2); }
+.p-track { height: 6px; border-radius: 6px; background: var(--sand); overflow: hidden; }
+.p-fill { height: 100%; width: 20%; background: linear-gradient(90deg, var(--saffron-2), var(--saffron)); border-radius: 6px; transition: width .6s var(--ease); }
+html[dir="rtl"] .p-fill { margin-inline-start: 0; }
+
+.step { display: none; }
+.step.is-on { display: block; animation: stepIn .5s var(--ease); }
+@keyframes stepIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.step-head { margin-bottom: 26px; }
+.step-head h2 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 4px; }
+.step-head p { color: var(--muted); }
+.step-head h2:focus { outline: none; }
+
+.q { margin-bottom: 28px; border: 0; }
+.q > legend, .q > .q-label { display: block; font-weight: 700; color: var(--ink); margin-bottom: 10px; font-size: 16.5px; }
+.q .hint { font-weight: 400; color: var(--muted); font-size: 14px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.input { width: 100%; min-height: 54px; padding: 12px 16px; background: var(--ivory); border: 1.5px solid var(--line); border-radius: var(--r-sm); font-size: 16px; color: var(--ink); transition: border-color .2s, box-shadow .2s, background-color .2s; }
+textarea.input { min-height: 120px; resize: vertical; line-height: 1.8; }
+.input:focus { outline: none; border-color: var(--saffron); background: var(--white); box-shadow: 0 0 0 4px rgba(185,138,94,.18); }
+.input[aria-invalid="true"] { border-color: #B24A35; }
+.field-label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin-bottom: 6px; }
+
+/* Choice tiles */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.tiles.wide { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.tile { position: relative; }
+.tile input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.tile > span { display: flex; align-items: center; gap: 10px; min-height: 54px; padding: 10px 16px; border-radius: var(--r-sm); background: var(--ivory); box-shadow: inset 0 0 0 1.5px var(--line); font-weight: 600; color: var(--ink); font-size: 15.5px; line-height: 1.45; transition: box-shadow .2s, background-color .2s, transform .2s var(--ease); }
+.tile > span .ic { color: var(--saffron-dk); width: 22px; height: 22px; }
+.tile:hover > span { box-shadow: inset 0 0 0 1.5px var(--saffron-2); }
+.tile input:checked + span { background: #FBF4EA; box-shadow: inset 0 0 0 2px var(--saffron); }
+.tile input:checked + span::after { content: ""; margin-inline-start: auto; width: 20px; height: 20px; border-radius: 50%; background: var(--saffron) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 13px no-repeat; flex-shrink: 0; }
+.tile input:focus-visible + span { outline: 3px solid var(--saffron); outline-offset: 2px; }
+.tiles.small { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); }
+.tiles.small .tile > span { justify-content: center; font-size: 17px; }
+.tiles.small input:checked + span::after { display: none; }
+
+/* Counter */
+.counter { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 18px; border-radius: var(--r-sm); background: var(--ivory); box-shadow: inset 0 0 0 1.5px var(--line); }
+html[dir="rtl"] .counter { padding: 10px 18px 10px 12px; }
+.counter label { font-weight: 600; color: var(--ink); }
+.counter .ctl { display: flex; align-items: center; gap: 10px; }
+.counter button { width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--white); box-shadow: inset 0 0 0 1.5px var(--line); font-size: 22px; line-height: 1; cursor: pointer; color: var(--ink); transition: background-color .2s, box-shadow .2s; }
+.counter button:hover { box-shadow: inset 0 0 0 1.5px var(--saffron); }
+.counter output { min-width: 28px; text-align: center; font-weight: 800; font-size: 20px; color: var(--ink); }
+
+.err { display: none; color: #9E3A26; font-size: 14px; margin-top: 6px; }
+.has-error .err { display: block; }
+.has-error .tiles .tile > span, .has-error > .input { box-shadow: inset 0 0 0 1.5px #C77A68; }
+
+.nav-btns { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; padding-top: 24px; border-top: 1px solid var(--line); }
+.nav-btns .count { color: var(--muted); font-size: 14.5px; }
+html[dir="rtl"] .nav-btns .next .ic, html[dir="ltr"] .nav-btns .prev .ic { transform: scaleX(-1); }
+.btn[hidden] { display: none; }
+.consent { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; border-radius: var(--r-sm); background: var(--ivory); box-shadow: inset 0 0 0 1px var(--line); }
+.consent input { width: 22px; height: 22px; margin-top: 4px; accent-color: var(--saffron-dk); flex-shrink: 0; }
+.form-msg { display: none; margin-top: 16px; padding: 12px 16px; border-radius: 12px; background: #F8E6E0; color: #7E2F22; font-size: 15px; }
+.form-msg a { font-weight: 700; }
+
+.done { display: none; text-align: center; padding: 40px 0 20px; }
+.done.is-on { display: block; animation: stepIn .5s var(--ease); }
+.done svg { width: 96px; height: 96px; margin: 0 auto 18px; display: block; }
+.done circle { fill: none; stroke: var(--saffron); stroke-width: 3; stroke-dasharray: 283; stroke-dashoffset: 283; animation: draw .8s var(--ease) forwards; }
+.done path { fill: none; stroke: var(--saffron-dk); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 60; stroke-dashoffset: 60; animation: draw .5s .6s var(--ease) forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.done h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 8px; }
+.done p { max-width: 52ch; margin: 0 auto 24px; }
+
+/* Info */
+.info { padding: 96px 0; background: var(--sand); }
+.info-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+.info-head h2 { font-size: clamp(28px, 3.4vw, 42px); margin-bottom: 8px; }
+.info-head p { color: var(--muted); }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.card { background: var(--white); border-radius: var(--r-md); padding: 34px; box-shadow: var(--sh-1); }
+.card h3 { margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+.card h3 .bub { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--night); color: var(--saffron-2); }
+.dots { list-style: none; display: grid; gap: 12px; }
+.dots li { position: relative; padding-inline-start: 22px; }
+.dots li::before { content: ""; position: absolute; inset-inline-start: 0; top: .75em; width: 9px; height: 9px; border-radius: 3px; transform: rotate(45deg); background: var(--saffron); }
+html[lang="en"] .dots li::before { top: .6em; }
+.dots b { color: var(--ink); }
+.areas { display: grid; gap: 10px; }
+.area { padding: 14px 16px; border-radius: var(--r-sm); background: var(--ivory); box-shadow: inset 0 0 0 1px var(--line); }
+.area b { display: block; color: var(--ink); line-height: 1.5; }
+.area span { font-size: 15px; color: var(--muted); line-height: 1.7; }
+.note { font-size: 14px; color: var(--muted); margin-top: 16px; }
+.updated { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 13.5px; color: var(--muted); background: var(--ivory); padding: 4px 12px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); }
+.updated::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--saffron); flex-shrink: 0; }
+select.input { appearance: none; -webkit-appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237A6C61' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: 18px; background-position: left 16px center; padding-left: 44px; }
+html[dir="ltr"] select.input { background-position: right 16px center; padding-left: 16px; padding-right: 44px; }
+
+.site-footer { background: #1A1410; color: #BFAE9E; padding: 36px 0; }
+.ft { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+.site-footer .brand { color: var(--ivory); }
+.site-footer .brand-sub { color: var(--saffron-2); }
+.ft a.wa { display: inline-flex; align-items: center; gap: 8px; color: var(--saffron-2); text-decoration: none; font-weight: 700; }
+.wa-float { position: fixed; bottom: 22px; left: 22px; z-index: 40; width: 58px; height: 58px; border-radius: 50%; background: #1FA855; color: #fff; display: grid; place-items: center; box-shadow: 0 12px 30px -8px rgba(20,110,60,.7); transition: transform .3s var(--ease); }
+html[dir="ltr"] .wa-float { left: auto; right: 22px; }
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 30px; height: 30px; fill: currentColor; }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+
+@media (max-width: 900px) {
+  .h-grid, .info-grid { grid-template-columns: 1fr; }
+  .h-art { max-width: 340px; margin: 0 auto; }
+  .p-labels li .t { display: none; }
+  .p-labels { grid-template-columns: repeat(5, auto); justify-content: space-between; }
+}
+@media (max-width: 640px) {
+  .row, .row3 { grid-template-columns: 1fr; }
+  .back .t { display: none; }
+  .wizard { padding: 28px 18px; }
+  .card { padding: 26px 20px; }
+  .nav-btns .count { display: none; }
+  .nav-btns .btn { padding: 0 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6C9A6"/><stop offset=".55" stop-color="#B98A5E"/><stop offset="1" stop-color="#8A6240"/></linearGradient></defs>
+  <symbol id="logo-mark" viewBox="0 0 100 100"><g fill="none" stroke="url(#rg)" stroke-width="2.4" stroke-linecap="round"><path d="M82 11 22 89M72 11h18M24 40v49M16 89h17"/></g><path fill="url(#rg)" d="M10 11 C19 7 30 7 36 13 C52 34 66 58 80 80 C84 86 88 89 94 90 L66 90 C70 88 70 85 66 79 L29 22 C25 15 19 12 10 11 Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1.5"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 32 32"><path d="M16.05 2.5a13.45 13.45 0 0 0-11.4 20.6l-2.1 6.3 6.5-2.1A13.45 13.45 0 1 0 16.05 2.5zm0 24.5c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-4.4 1.4 1.4-4.2-.3-.5A11.2 11.2 0 1 1 16.05 27.1zm6.2-8.5c-.3-.2-2-.1-2.3-.1-.3 0-.5.1-.7.4-.2.3-.9 1.1-1.1 1.3-.2.3-.5.3-.8.2-.3-.1-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.4-.2-.3 0-.5.1-.6.2-.2.4-.4.5-.6.2-.2.2-.4.3-.6.1-.3 0-.5-.1-.7s-1.1-2.6-1.5-3.6c-.4-1-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8 0 2.2 1.6 4.4 1.9 4.7.2.3 3.2 4.9 7.7 6.8 1.1.5 1.9.7 2.6.9 1.1.3 2 .3 2.8.2.8-.1 2.6-1.1 2.9-2.1.3-1 .3-1.9.2-2.1-.2-.2-.5-.3-.9-.4z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="index.html" aria-label="Novarexium Group">
+      <span class="mark"><svg aria-hidden="true"><use href="#logo-mark"/></svg></span>
+      <span class="brand-txt"><span class="brand-name">NOVAREXIUM</span><span class="brand-sub">GROUP</span></span>
+    </a>
+    <div class="hdr-actions">
+      <button class="pill-btn" id="langBtn" type="button" aria-label="Switch to English"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span id="langLabel">EN</span></button>
+      <a class="pill-btn back" href="index.html" aria-label="صفحه اصلی" data-i18n-aria="back"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="t" data-i18n="back">صفحه اصلی</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="h-hero">
+  <div class="wrap h-grid">
+    <div>
+      <h1 class="display" data-i18n="h_title">خانه‌ای در مادرید، به اندازه نیاز خانواده شما</h1>
+      <p class="lead" data-i18n="h_lead">چند سوال ساده درباره خانواده، نوع خانه، محله و بودجه‌تان بپرسیم تا مشاوران ما در مادرید گزینه‌های مناسب را برایتان پیدا کنند؛ از بازدید تا بررسی قرارداد و تحویل کلید کنارتان هستیم.</p>
+      <ul class="h-steps">
+        <li><b>۱</b><span data-i18n="hs1">فرم را پر کنید</span></li>
+        <li><b>۲</b><span data-i18n="hs2">با شما تماس می‌گیریم</span></li>
+        <li><b>۳</b><span data-i18n="hs3">بازدید از خانه‌ها</span></li>
+        <li><b>۴</b><span data-i18n="hs4">قرارداد و تحویل کلید</span></li>
+      </ul>
+    </div>
+    <div class="h-art"><img src="new-home.jpg" width="1200" height="896" alt="خانواده‌ای کلید خانه جدیدشان را تحویل می‌گیرند" data-i18n-alt="h_alt"></div>
+  </div>
+</section>
+
+<section class="wizard-sec">
+  <div class="wrap">
+    <div class="wizard">
+      <div class="progress" id="progress" aria-hidden="true">
+        <ol class="p-labels">
+          <li class="is-on"><span class="n">۱</span><span class="t" data-i18n="p1">خانواده</span></li>
+          <li><span class="n">۲</span><span class="t" data-i18n="p2">نوع خانه</span></li>
+          <li><span class="n">۳</span><span class="t" data-i18n="p3">محله</span></li>
+          <li><span class="n">۴</span><span class="t" data-i18n="p4">بودجه و زمان</span></li>
+          <li><span class="n">۵</span><span class="t" data-i18n="p5">ارسال</span></li>
+        </ol>
+        <div class="p-track"><div class="p-fill" id="pFill"></div></div>
+      </div>
+
+      <form id="housingForm" novalidate>
+        <input type="hidden" name="_subject" value="Housing request – Madrid">
+        <input type="hidden" name="Form" value="Housing request (Madrid)">
+
+        <!-- STEP 1: Family -->
+        <section class="step is-on" data-step="1" aria-labelledby="s1h">
+          <div class="step-head"><h2 class="display" id="s1h" data-i18n="s1_t">درباره خانواده شما</h2><p data-i18n="s1_d">چه کسانی در این خانه زندگی خواهند کرد؟</p></div>
+          <div class="row">
+            <div class="q" data-req="text">
+              <label class="field-label" for="name" data-i18n="f_name">نام و نام خانوادگی</label>
+              <input class="input" id="name" name="Full_name" autocomplete="name" required>
+              <p class="err" data-i18n="e_name">نام خود را وارد کنید.</p>
+            </div>
+            <div class="q" data-req="phone">
+              <label class="field-label" for="phone" data-i18n="f_phone">شماره تماس یا واتساپ (با کد کشور)</label>
+              <input class="input" id="phone" name="Phone_WhatsApp" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" placeholder="+34 / +98 …" required>
+              <p class="err" data-i18n="e_phone">شماره تماس را همراه با کد کشور وارد کنید.</p>
+            </div>
+          </div>
+          <div class="q">
+            <label class="field-label" for="email"><span data-i18n="f_email">ایمیل</span> <span class="hint" data-i18n="opt">(اختیاری)</span></label>
+            <input class="input" id="email" name="Email" type="email" dir="ltr" autocomplete="email">
+          </div>
+          <div class="row">
+            <div class="counter"><label id="adL" data-i18n="f_adults">بزرگسالان</label><div class="ctl"><button type="button" data-step-btn="-" data-for="adults" aria-label="کم کردن بزرگسالان" data-i18n-aria="a_ad_dec">−</button><output id="adultsOut" aria-labelledby="adL">2</output><button type="button" data-step-btn="+" data-for="adults" aria-label="اضافه کردن بزرگسالان" data-i18n-aria="a_ad_inc">+</button></div><input type="hidden" id="adults" name="Adults" value="2"></div>
+            <div class="counter"><label id="chL" data-i18n="f_children">کودکان (زیر ۱۸ سال)</label><div class="ctl"><button type="button" data-step-btn="-" data-for="children" aria-label="کم کردن کودکان" data-i18n-aria="a_ch_dec">−</button><output id="childrenOut" aria-labelledby="chL">0</output><button type="button" data-step-btn="+" data-for="children" aria-label="اضافه کردن کودکان" data-i18n-aria="a_ch_inc">+</button></div><input type="hidden" id="children" name="Children" value="0"></div>
+          </div>
+          <div class="q" id="agesQ" style="margin-top:22px" hidden>
+            <label class="field-label" for="ages" data-i18n="f_ages">سن فرزندان</label>
+            <input class="input" id="ages" name="Children_ages" placeholder="۴، ۹، ۱۵" data-i18n-ph="f_ages_ph">
+          </div>
+          <fieldset class="q" style="margin-top:22px">
+            <legend data-i18n="f_pets">حیوان خانگی دارید؟</legend>
+            <div class="tiles">
+              <label class="tile"><input type="radio" name="Pets" value="No" checked><span data-i18n="o_no">خیر</span></label>
+              <label class="tile"><input type="radio" name="Pets" value="Cat"><span data-i18n="o_cat">گربه</span></label>
+              <label class="tile"><input type="radio" name="Pets" value="Dog"><span data-i18n="o_dog">سگ</span></label>
+              <label class="tile"><input type="radio" name="Pets" value="Other"><span data-i18n="o_other">سایر</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="q">
+            <legend data-i18n="f_access">نیاز ویژه دسترسی (مثلاً سالمند یا ویلچر)؟</legend>
+            <div class="tiles">
+              <label class="tile"><input type="radio" name="Accessibility_needs" value="No" checked><span data-i18n="o_no">خیر</span></label>
+              <label class="tile"><input type="radio" name="Accessibility_needs" value="Yes - needs lift / ground floor"><span data-i18n="o_yes_access">بله، آسانسور یا طبقه همکف لازم است</span></label>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- STEP 2: Home -->
+        <section class="step" data-step="2" aria-labelledby="s2h">
+          <div class="step-head"><h2 class="display" id="s2h" data-i18n="s2_t">چه خانه‌ای می‌خواهید؟</h2><p data-i18n="s2_d">نوع خانه و امکاناتی که برایتان مهم است را انتخاب کنید.</p></div>
+          <fieldset class="q" data-req="radio" data-name="Rent_or_buy">
+            <legend data-i18n="f_deal">اجاره یا خرید؟</legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="radio" name="Rent_or_buy" value="Rent"><span><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg><span data-i18n="o_rent">اجاره</span></span></label>
+              <label class="tile"><input type="radio" name="Rent_or_buy" value="Buy"><span><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="o_buy">خرید</span></span></label>
+              <label class="tile"><input type="radio" name="Rent_or_buy" value="Not sure"><span><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg><span data-i18n="o_unsure_adv">هنوز مطمئن نیستم</span></span></label>
+            </div>
+            <p class="err" data-i18n="e_choose">یکی از گزینه‌ها را انتخاب کنید.</p>
+          </fieldset>
+          <fieldset class="q" data-req="radio" data-name="Property_type">
+            <legend data-i18n="f_type">نوع ملک</legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="radio" name="Property_type" value="Apartment"><span><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg><span data-i18n="o_apt">آپارتمان</span></span></label>
+              <label class="tile"><input type="radio" name="Property_type" value="House / chalet"><span><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="o_house">خانه ویلایی (چالت)</span></span></label>
+              <label class="tile"><input type="radio" name="Property_type" value="Duplex / penthouse"><span><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg><span data-i18n="o_duplex">دوبلکس یا پنت‌هاوس</span></span></label>
+              <label class="tile"><input type="radio" name="Property_type" value="Any"><span><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg><span data-i18n="o_any">فرقی نمی‌کند</span></span></label>
+            </div>
+            <p class="err" data-i18n="e_choose">یکی از گزینه‌ها را انتخاب کنید.</p>
+          </fieldset>
+          <div class="row">
+            <fieldset class="q" data-req="radio" data-name="Bedrooms">
+              <legend data-i18n="f_beds">تعداد اتاق خواب</legend>
+              <div class="tiles small">
+                <label class="tile"><input type="radio" name="Bedrooms" value="1"><span>1</span></label>
+                <label class="tile"><input type="radio" name="Bedrooms" value="2"><span>2</span></label>
+                <label class="tile"><input type="radio" name="Bedrooms" value="3"><span>3</span></label>
+                <label class="tile"><input type="radio" name="Bedrooms" value="4"><span>4</span></label>
+                <label class="tile"><input type="radio" name="Bedrooms" value="5+"><span>5+</span></label>
+              </div>
+              <p class="err" data-i18n="e_choose">یکی از گزینه‌ها را انتخاب کنید.</p>
+            </fieldset>
+            <fieldset class="q">
+              <legend data-i18n="f_baths">تعداد سرویس بهداشتی/حمام</legend>
+              <div class="tiles small">
+                <label class="tile"><input type="radio" name="Bathrooms" value="1"><span>1</span></label>
+                <label class="tile"><input type="radio" name="Bathrooms" value="2" checked><span>2</span></label>
+                <label class="tile"><input type="radio" name="Bathrooms" value="3+"><span>3+</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="row">
+            <div class="q">
+              <label class="field-label" for="size"><span data-i18n="f_size">حداقل متراژ (متر مربع)</span> <span class="hint" data-i18n="opt">(اختیاری)</span></label>
+              <input class="input" id="size" name="Min_size_m2" type="number" min="20" max="2000" inputmode="numeric" dir="ltr" placeholder="90">
+            </div>
+            <fieldset class="q">
+              <legend data-i18n="f_furn">مبله باشد؟</legend>
+              <div class="tiles">
+                <label class="tile"><input type="radio" name="Furnished" value="Furnished"><span data-i18n="o_furn">مبله</span></label>
+                <label class="tile"><input type="radio" name="Furnished" value="Unfurnished"><span data-i18n="o_unfurn">بدون مبلمان</span></label>
+                <label class="tile"><input type="radio" name="Furnished" value="Either" checked><span data-i18n="o_either">فرقی نمی‌کند</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="q">
+            <legend><span data-i18n="f_must">امکانات ضروری</span> <span class="hint" data-i18n="f_multi">(هر چند مورد که لازم است)</span></legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Lift"><span data-i18n="m_lift">آسانسور</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Parking"><span data-i18n="m_park">پارکینگ</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Balcony / terrace"><span data-i18n="m_terr">بالکن یا تراس</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Air conditioning"><span data-i18n="m_ac">کولر</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Heating"><span data-i18n="m_heat">شوفاژ / گرمایش</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Storage room"><span data-i18n="m_store">انباری</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Pool"><span data-i18n="m_pool">استخر (مشاع)</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Garden"><span data-i18n="m_garden">حیاط یا باغچه</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Near metro"><span data-i18n="m_metro">نزدیک مترو</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Pets allowed"><span data-i18n="m_pets">اجازه نگهداری حیوان</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Concierge / security"><span data-i18n="m_sec">نگهبان یا لابی‌من</span></label>
+              <label class="tile"><input type="checkbox" name="Must_haves" value="Home office space"><span data-i18n="m_office">فضای کار در خانه</span></label>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- STEP 3: Location -->
+        <section class="step" data-step="3" aria-labelledby="s3h">
+          <div class="step-head"><h2 class="display" id="s3h" data-i18n="s3_t">کجای مادرید؟</h2><p data-i18n="s3_d">محله‌های مورد علاقه‌تان را انتخاب کنید. اگر مطمئن نیستید، ما پیشنهاد می‌دهیم.</p></div>
+          <fieldset class="q" data-req="check" data-name="Preferred_areas">
+            <legend><span data-i18n="f_areas">محله‌ها و شهرهای اطراف</span> <span class="hint" data-i18n="f_multi">(هر چند مورد که لازم است)</span></legend>
+            <div class="tiles">
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Salamanca"><span>Salamanca</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Chamberí"><span>Chamberí</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Retiro"><span>Retiro</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Chamartín"><span>Chamartín</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Centro"><span>Centro</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Moncloa-Aravaca"><span>Moncloa-Aravaca</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Arganzuela"><span>Arganzuela</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Tetuán"><span>Tetuán</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Hortaleza"><span>Hortaleza</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Pozuelo de Alarcón"><span>Pozuelo de Alarcón</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Majadahonda"><span>Majadahonda</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Las Rozas"><span>Las Rozas</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Boadilla del Monte"><span>Boadilla del Monte</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Alcobendas / La Moraleja"><span>Alcobendas / La Moraleja</span></label>
+              <label class="tile"><input type="checkbox" name="Preferred_areas" value="Not sure - please recommend"><span data-i18n="o_recommend">مطمئن نیستم، پیشنهاد دهید</span></label>
+            </div>
+            <p class="err" data-i18n="e_area">حداقل یک گزینه انتخاب کنید (یا «مطمئن نیستم»).</p>
+          </fieldset>
+          <fieldset class="q">
+            <legend data-i18n="f_school">مدرسه برای فرزندان</legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="radio" name="School_needs" value="Not needed" checked><span data-i18n="o_noschool">لازم نیست</span></label>
+              <label class="tile"><input type="radio" name="School_needs" value="International school"><span data-i18n="o_intl">مدرسه بین‌المللی</span></label>
+              <label class="tile"><input type="radio" name="School_needs" value="Public / bilingual school"><span data-i18n="o_public">مدرسه دولتی یا دوزبانه</span></label>
+              <label class="tile"><input type="radio" name="School_needs" value="Private / concertado"><span data-i18n="o_private">مدرسه خصوصی</span></label>
+            </div>
+          </fieldset>
+          <div class="row">
+            <div class="q">
+              <label class="field-label" for="work"><span data-i18n="f_work">محل کار یا تحصیل در مادرید</span> <span class="hint" data-i18n="opt">(اختیاری)</span></label>
+              <input class="input" id="work" name="Work_or_study_location" placeholder="مثلاً: دانشگاه کمپلوتنسه، کار از خانه…" data-i18n-ph="f_work_ph">
+            </div>
+            <fieldset class="q">
+              <legend data-i18n="f_commute">حداکثر زمان رفت‌وآمد</legend>
+              <div class="tiles">
+                <label class="tile"><input type="radio" name="Max_commute" value="15 min"><span data-i18n="o_15">۱۵ دقیقه</span></label>
+                <label class="tile"><input type="radio" name="Max_commute" value="30 min" checked><span data-i18n="o_30">۳۰ دقیقه</span></label>
+                <label class="tile"><input type="radio" name="Max_commute" value="45+ min"><span data-i18n="o_45">۴۵ دقیقه یا بیشتر</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="q">
+            <legend data-i18n="f_car">ماشین خواهید داشت؟</legend>
+            <div class="tiles">
+              <label class="tile"><input type="radio" name="Car" value="Yes"><span data-i18n="o_yes">بله</span></label>
+              <label class="tile"><input type="radio" name="Car" value="No - public transport"><span data-i18n="o_transit">خیر، حمل‌ونقل عمومی</span></label>
+              <label class="tile"><input type="radio" name="Car" value="Not sure" checked><span data-i18n="o_dk">هنوز نمی‌دانم</span></label>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- STEP 4: Budget & timing -->
+        <section class="step" data-step="4" aria-labelledby="s4h">
+          <div class="step-head"><h2 class="display" id="s4h" data-i18n="s4_t">بودجه و زمان نقل‌مکان</h2><p data-i18n="s4_d">این اطلاعات کمک می‌کند فقط خانه‌هایی را پیشنهاد دهیم که واقعاً مناسب شما هستند.</p></div>
+          <fieldset class="q" data-req="radio" data-name="Budget" id="budgetRent">
+            <legend data-i18n="f_rent_budget">بودجه اجاره ماهانه</legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="radio" name="Budget" value="Rent: under €1,200/month"><span class="ltr">&lt; €1,200</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Rent: €1,200–1,800/month"><span class="ltr">€1,200 – 1,800</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Rent: €1,800–2,500/month"><span class="ltr">€1,800 – 2,500</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Rent: €2,500–3,500/month"><span class="ltr">€2,500 – 3,500</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Rent: over €3,500/month"><span class="ltr">€3,500+</span></label>
+            </div>
+            <p class="err" data-i18n="e_choose">یکی از گزینه‌ها را انتخاب کنید.</p>
+          </fieldset>
+          <fieldset class="q" data-req="radio" data-name="Budget" id="budgetBuy" hidden>
+            <legend data-i18n="f_buy_budget">بودجه خرید</legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="radio" name="Budget" value="Buy: under €300k"><span class="ltr">&lt; €300k</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Buy: €300k–500k"><span class="ltr">€300k – 500k</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Buy: €500k–800k"><span class="ltr">€500k – 800k</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Buy: €800k–1.2M"><span class="ltr">€800k – 1.2M</span></label>
+              <label class="tile"><input type="radio" name="Budget" value="Buy: over €1.2M"><span class="ltr">€1.2M+</span></label>
+            </div>
+            <p class="err" data-i18n="e_choose">یکی از گزینه‌ها را انتخاب کنید.</p>
+          </fieldset>
+          <div class="row">
+            <div class="q" data-req="select">
+              <label class="field-label" for="movein" data-i18n="f_movein">از چه زمانی خانه لازم دارید؟</label>
+              <select class="input" id="movein" name="Move_in" required></select>
+              <p class="err" data-i18n="e_date">تاریخ تقریبی را انتخاب کنید.</p>
+            </div>
+            <fieldset class="q">
+              <legend data-i18n="f_length">مدت اقامت در این خانه</legend>
+              <div class="tiles">
+                <label class="tile"><input type="radio" name="Stay_length" value="Under 1 year"><span data-i18n="o_lt1">کمتر از ۱ سال</span></label>
+                <label class="tile"><input type="radio" name="Stay_length" value="1–2 years" checked><span data-i18n="o_12">۱ تا ۲ سال</span></label>
+                <label class="tile"><input type="radio" name="Stay_length" value="3+ years"><span data-i18n="o_3">۳ سال یا بیشتر</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="q">
+            <legend data-i18n="f_status">وضعیت اقامت شما در اسپانیا</legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="radio" name="Residency_status" value="Not applied yet"><span data-i18n="o_notyet">هنوز اقدام نکرده‌ام</span></label>
+              <label class="tile"><input type="radio" name="Residency_status" value="Visa in process"><span data-i18n="o_inproc">ویزا در حال بررسی است</span></label>
+              <label class="tile"><input type="radio" name="Residency_status" value="Have visa / residency"><span data-i18n="o_have">ویزا یا اقامت دارم</span></label>
+              <label class="tile"><input type="radio" name="Residency_status" value="EU citizen"><span data-i18n="o_eu">شهروند اتحادیه اروپا هستم</span></label>
+            </div>
+          </fieldset>
+          <div class="row">
+            <fieldset class="q">
+              <legend data-i18n="f_nie">NIE (شماره شناسایی خارجی) دارید؟</legend>
+              <div class="tiles">
+                <label class="tile"><input type="radio" name="Has_NIE" value="Yes"><span data-i18n="o_yes">بله</span></label>
+                <label class="tile"><input type="radio" name="Has_NIE" value="In process"><span data-i18n="o_inp">در حال اقدام</span></label>
+                <label class="tile"><input type="radio" name="Has_NIE" value="No"><span data-i18n="o_no">خیر</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend data-i18n="f_bank">حساب بانکی در اسپانیا دارید؟</legend>
+              <div class="tiles">
+                <label class="tile"><input type="radio" name="Spanish_bank_account" value="Yes"><span data-i18n="o_yes">بله</span></label>
+                <label class="tile"><input type="radio" name="Spanish_bank_account" value="No"><span data-i18n="o_no">خیر</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="q">
+            <legend><span data-i18n="f_income">مدرک درآمدی که می‌توانید ارائه دهید</span> <span class="hint" data-i18n="f_multi">(هر چند مورد که لازم است)</span></legend>
+            <div class="tiles wide">
+              <label class="tile"><input type="checkbox" name="Proof_of_income" value="Spanish employment contract"><span data-i18n="i_contract">قرارداد کار در اسپانیا</span></label>
+              <label class="tile"><input type="checkbox" name="Proof_of_income" value="Remote work / foreign income"><span data-i18n="i_remote">درآمد دورکاری یا خارج از اسپانیا</span></label>
+              <label class="tile"><input type="checkbox" name="Proof_of_income" value="Savings / bank statements"><span data-i18n="i_savings">پس‌انداز و صورت‌حساب بانکی</span></label>
+              <label class="tile"><input type="checkbox" name="Proof_of_income" value="Pension / passive income"><span data-i18n="i_pension">حقوق بازنشستگی یا درآمد غیرفعال</span></label>
+              <label class="tile"><input type="checkbox" name="Proof_of_income" value="Can pay months in advance"><span data-i18n="i_advance">امکان پرداخت چند ماه پیش‌پرداخت</span></label>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- STEP 5: Final -->
+        <section class="step" data-step="5" aria-labelledby="s5h">
+          <div class="step-head"><h2 class="display" id="s5h" data-i18n="s5_t">تقریباً تمام شد</h2><p data-i18n="s5_d">هر نکته دیگری که برای پیدا کردن خانه مناسب مهم است را بنویسید.</p></div>
+          <div class="q">
+            <label class="field-label" for="notes"><span data-i18n="f_notes">توضیحات بیشتر</span> <span class="hint" data-i18n="opt">(اختیاری)</span></label>
+            <textarea class="input" id="notes" name="Notes" rows="5" placeholder="مثلاً: نزدیک پارک باشد، نور زیاد، طبقه بالا، آرام…" data-i18n-ph="f_notes_ph"></textarea>
+          </div>
+          <fieldset class="q">
+            <legend data-i18n="f_contact">ترجیح می‌دهید از چه راهی با شما تماس بگیریم؟</legend>
+            <div class="tiles">
+              <label class="tile"><input type="radio" name="Preferred_contact" value="WhatsApp" checked><span data-i18n="c_wa">واتساپ</span></label>
+              <label class="tile"><input type="radio" name="Preferred_contact" value="Phone call"><span data-i18n="c_call">تماس تلفنی</span></label>
+              <label class="tile"><input type="radio" name="Preferred_contact" value="Telegram"><span data-i18n="c_tg">تلگرام</span></label>
+              <label class="tile"><input type="radio" name="Preferred_contact" value="Email"><span data-i18n="c_email">ایمیل</span></label>
+            </div>
+          </fieldset>
+          <div class="q" data-req="consent">
+            <label class="consent"><input type="checkbox" id="consent" name="Consent" value="Yes"><span data-i18n="f_consent">موافقم که نوارکسیوم برای پیدا کردن خانه با من تماس بگیرد و این اطلاعات را فقط برای همین کار استفاده کند.</span></label>
+            <p class="err" data-i18n="e_consent">برای ارسال، این گزینه را تأیید کنید.</p>
+          </div>
+          <input type="hidden" name="Language" id="langField" value="fa">
+        </section>
+
+        <div class="nav-btns">
+          <button type="button" class="btn btn--line prev" id="prevBtn" hidden><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span data-i18n="b_prev">مرحله قبل</span></button>
+          <span class="count" id="stepCount"></span>
+          <button type="button" class="btn btn--gold next" id="nextBtn"><span data-i18n="b_next">مرحله بعد</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <button type="submit" class="btn btn--gold" id="submitBtn" hidden><span data-i18n="b_send">ارسال درخواست خانه</span></button>
+        </div>
+        <p class="form-msg" id="formMsg" role="alert"></p>
+      </form>
+
+      <div class="done" id="done" role="status" tabindex="-1">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45"/><path d="M30 52l13 13 27-28"/></svg>
+        <h2 class="display" data-i18n="d_t">درخواست شما ارسال شد</h2>
+        <p data-i18n="d_d">مشاوران مسکن نوارکسیوم اطلاعات شما را بررسی می‌کنند و برای هماهنگی گزینه‌ها و بازدیدها با شما تماس می‌گیرند.</p>
+        <a class="btn btn--line" href="index.html" data-i18n="back">صفحه اصلی</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <div class="info-head reveal">
+      <h2 class="display" data-i18n="in_t">خوب است بدانید</h2>
+      <p data-i18n="in_d">چند نکته درباره اجاره خانه در مادرید و محله‌هایی که خانواده‌ها بیشتر انتخاب می‌کنند.</p>
+    </div>
+    <div class="info-grid">
+      <div class="card reveal">
+        <h3><span class="bub"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><span data-i18n="in1_t">برای اجاره معمولاً لازم است</span></h3>
+        <ul class="dots">
+          <li data-i18n="in1_1"><b>پاسپورت و NIE:</b> صاحب‌خانه‌ها معمولاً مدرک هویتی و شماره NIE می‌خواهند.</li>
+          <li data-i18n="in1_2"><b>مدرک درآمد:</b> قرارداد کار، فیش حقوقی یا صورت‌حساب بانکی؛ معمولاً انتظار دارند اجاره حدود یک‌سوم درآمد ماهانه باشد.</li>
+          <li data-i18n="in1_3"><b>ودیعه (fianza):</b> طبق قانون یک ماه اجاره برای خانه مسکونی، و گاهی ضمانت اضافه تا حداکثر دو ماه.</li>
+          <li data-i18n="in1_4"><b>کمیسیون مشاور املاک:</b> طبق قانون مسکن ۲۰۲۳ اسپانیا، در اجاره هزینه آژانس را صاحب‌خانه می‌پردازد.</li>
+          <li data-i18n="in1_5"><b>حساب بانکی اسپانیا:</b> برای پرداخت اجاره و قبض‌ها کار را بسیار ساده‌تر می‌کند؛ در افتتاح آن هم کمکتان می‌کنیم.</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3><span class="bub"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><span data-i18n="in2_t">محله‌های محبوب خانواده‌ها</span></h3>
+        <div class="areas">
+          <div class="area"><b>Salamanca · Retiro</b><span data-i18n="a1">مرکزی، شیک و امن؛ نزدیک پارک رتیرو، فروشگاه‌ها و مدارس خوب.</span></div>
+          <div class="area"><b>Chamberí · Chamartín</b><span data-i18n="a2">محله‌های کلاسیک و پرجنب‌وجوش با دسترسی عالی به مترو؛ مناسب خانواده‌ها.</span></div>
+          <div class="area"><b>Arganzuela</b><span data-i18n="a3">کنار پارک بزرگ مادرید ریو؛ گزینه‌ای مرکزی با قیمت معقول‌تر.</span></div>
+          <div class="area"><b>Pozuelo · Majadahonda · Las Rozas</b><span data-i18n="a4">حومه‌های سبز و آرام با خانه‌های ویلایی و چند مدرسه بین‌المللی؛ معمولاً ماشین لازم است.</span></div>
+        </div>
+        <p class="note" data-i18n="in_note">قیمت‌ها و شرایط بازار تغییر می‌کند؛ مشاوران ما بر اساس شرایط روز شما را راهنمایی می‌کنند.</p>
+        <span class="updated" data-updated="2026-10-22"></span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap ft">
+    <a class="brand" href="index.html" aria-label="Novarexium Group">
+      <span class="mark"><svg aria-hidden="true"><use href="#logo-mark"/></svg></span>
+      <span class="brand-txt"><span class="brand-name">NOVAREXIUM</span><span class="brand-sub">GROUP</span></span>
+    </a>
+    <a class="wa" data-wa="wa_housing" href="https://wa.me/34614066200" target="_blank" rel="noopener"><span data-i18n="ft_q">سوالی دارید؟ در واتساپ بپرسید</span> <span class="ltr">+34 614 066 200</span></a>
+  </div>
+</footer>
+<a class="wa-float" data-wa="wa_housing" href="https://wa.me/34614066200" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script>
+const EN = {
+  back:"Home", a_ad_dec:"Fewer adults", a_ad_inc:"More adults", a_ch_dec:"Fewer children", a_ch_inc:"More children",
+  mv_choose:"Choose a month", mv_asap:"As soon as possible", upd:"Last updated:",
+  wa_housing:"Hello Novarexium, I have a question about finding a home in Madrid.",
+  h_title:"A home in Madrid that fits your family",
+  h_lead:"Answer a few simple questions about your family, the home you want, the area and your budget, and our Madrid advisers will find suitable options for you — we're with you from viewings to contract review and handing over the keys.",
+  hs1:"Fill in the form", hs2:"We contact you", hs3:"House viewings", hs4:"Contract & keys", h_alt:"A family receiving the keys to their new home",
+  p1:"Family", p2:"Home", p3:"Area", p4:"Budget & timing", p5:"Send",
+  s1_t:"About your family", s1_d:"Who will be living in this home?",
+  f_name:"Full name", e_name:"Enter your name.", f_phone:"Phone or WhatsApp (with country code)", e_phone:"Enter your phone number with the country code.",
+  f_email:"Email", opt:"(optional)", f_adults:"Adults", f_children:"Children (under 18)", f_ages:"Children's ages", f_ages_ph:"e.g. 4, 9, 15",
+  f_pets:"Do you have pets?", o_no:"No", o_cat:"Cat", o_dog:"Dog", o_other:"Other", o_yes:"Yes",
+  f_access:"Any accessibility needs (e.g. elderly family member or wheelchair)?", o_yes_access:"Yes, we need a lift or ground floor",
+  s2_t:"What kind of home?", s2_d:"Choose the type of home and the features that matter to you.",
+  f_deal:"Rent or buy?", o_rent:"Rent", o_buy:"Buy", o_unsure_adv:"Not sure yet", e_choose:"Please choose one option.",
+  f_type:"Property type", o_apt:"Apartment", o_house:"House (chalet)", o_duplex:"Duplex or penthouse", o_any:"No preference",
+  f_beds:"Bedrooms", f_baths:"Bathrooms", f_size:"Minimum size (m²)", f_furn:"Furnished?", o_furn:"Furnished", o_unfurn:"Unfurnished", o_either:"Either",
+  f_must:"Must-haves", f_multi:"(choose as many as you need)",
+  m_lift:"Lift", m_park:"Parking", m_terr:"Balcony or terrace", m_ac:"Air conditioning", m_heat:"Heating", m_store:"Storage room", m_pool:"Pool (shared)", m_garden:"Garden or patio", m_metro:"Near the metro", m_pets:"Pets allowed", m_sec:"Concierge / security", m_office:"Home office space",
+  s3_t:"Where in Madrid?", s3_d:"Choose the areas you like. Not sure? We'll recommend some.",
+  f_areas:"Neighbourhoods and nearby towns", o_recommend:"Not sure — please recommend", e_area:"Choose at least one option (or \"Not sure\").",
+  f_school:"Schooling for your children", o_noschool:"Not needed", o_intl:"International school", o_public:"Public or bilingual school", o_private:"Private school",
+  f_work:"Workplace or university in Madrid", f_work_ph:"e.g. Complutense University, remote work…",
+  f_commute:"Maximum commute", o_15:"15 minutes", o_30:"30 minutes", o_45:"45 minutes or more",
+  f_car:"Will you have a car?", o_transit:"No, public transport", o_dk:"Don't know yet",
+  s4_t:"Budget and moving date", s4_d:"This helps us suggest only homes that truly fit you.",
+  f_rent_budget:"Monthly rent budget", f_buy_budget:"Purchase budget",
+  f_movein:"When do you need the home from?", e_date:"Choose an approximate month.",
+  f_length:"How long will you stay in this home?", o_lt1:"Under 1 year", o_12:"1–2 years", o_3:"3+ years",
+  f_status:"Your residency status in Spain", o_notyet:"Haven't applied yet", o_inproc:"Visa in process", o_have:"I have a visa or residency", o_eu:"I'm an EU citizen",
+  f_nie:"Do you have an NIE (foreigner ID number)?", o_inp:"In process", f_bank:"Do you have a Spanish bank account?",
+  f_income:"Proof of income you can provide", i_contract:"Spanish employment contract", i_remote:"Remote work or foreign income", i_savings:"Savings and bank statements", i_pension:"Pension or passive income", i_advance:"Can pay several months in advance",
+  s5_t:"Almost done", s5_d:"Tell us anything else that matters for finding the right home.",
+  f_notes:"Anything else", f_notes_ph:"e.g. near a park, lots of light, high floor, quiet street…",
+  f_contact:"How should we contact you?", c_wa:"WhatsApp", c_call:"Phone call", c_tg:"Telegram", c_email:"Email",
+  f_consent:"I agree that Novarexium may contact me about finding a home and will use this information only for that purpose.", e_consent:"Please tick this box to send the form.",
+  b_prev:"Back", b_next:"Next step", b_send:"Send housing request", sending:"Sending…",
+  d_t:"Your request has been sent", d_d:"Novarexium's housing advisers will review your details and contact you to arrange options and viewings.",
+  in_t:"Good to know", in_d:"A few points about renting in Madrid, and the areas families choose most.",
+  in1_t:"What you usually need to rent",
+  in1_1:"<b>Passport and NIE:</b> landlords usually ask for ID and an NIE number.",
+  in1_2:"<b>Proof of income:</b> an employment contract, payslips or bank statements; rent is usually expected to be around a third of monthly income.",
+  in1_3:"<b>Deposit (fianza):</b> by law one month's rent for a residential lease, sometimes plus an extra guarantee of up to two months.",
+  in1_4:"<b>Agency fees:</b> under Spain's 2023 Housing Law, the landlord pays the agency fee on rentals.",
+  in1_5:"<b>Spanish bank account:</b> makes paying rent and bills much easier — we can help you open one.",
+  in2_t:"Popular areas for families",
+  a1:"Central, elegant and safe; close to Retiro Park, shops and good schools.", a2:"Classic, lively neighbourhoods with excellent metro access; great for families.",
+  a3:"Next to the large Madrid Río park; a central option at more reasonable prices.", a4:"Green, quiet suburbs with houses and several international schools; a car is usually needed.",
+  in_note:"Prices and market conditions change; our advisers will guide you based on current conditions.",
+  ft_q:"Questions? Ask us on WhatsApp",
+  err_send:'The request didn\'t go through. Check your connection and try again, or <a href="https://wa.me/34614066200" target="_blank" rel="noopener">message us on WhatsApp</a>.'
+};
+const FA_EXTRA = { mv_choose:"یک ماه را انتخاب کنید", mv_asap:"هر چه زودتر", upd:"آخرین به‌روزرسانی:", wa_housing:"سلام نوارکسیوم، درباره پیدا کردن خانه در مادرید سوال دارم.", sending:"در حال ارسال…", err_send:'درخواست ارسال نشد. اتصال اینترنت را بررسی کنید و دوباره امتحان کنید، یا <a href="https://wa.me/34614066200" target="_blank" rel="noopener">در واتساپ پیام دهید</a>.' };
+
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const faDigits = s => String(s).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+const latinDigits = s => String(s).replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+
+/* ── Dates in both calendars (Persian / Gregorian) ── */
+function dateParts(d, locale, opts) {
+  const parts = new Intl.DateTimeFormat(locale, opts).formatToParts(d);
+  return t => (parts.find(p => p.type === t) || {}).value || '';
+}
+const LONG = { day: 'numeric', month: 'long', year: 'numeric' };
+function fmtDate(d, locale) { const g = dateParts(d, locale, LONG); return `${g('day')} ${g('month')} ${g('year')}`; }
+function renderUpdated() {
+  $$('[data-updated]').forEach(el => {
+    const d = new Date(el.dataset.updated + 'T12:00:00');
+    let txt;
+    try {
+      txt = lang === 'fa'
+        ? `${fmtDate(d, 'fa-IR-u-ca-persian')} (${fmtDate(d, 'fa-IR-u-ca-gregory')})`
+        : `${fmtDate(d, 'en-GB')} (${fmtDate(d, 'en-GB-u-ca-persian')})`;
+    } catch (e) { txt = el.dataset.updated; }
+    el.textContent = `${t('upd')} ${txt}`;
+  });
+}
+/* Move-in month list: each Persian month with its Gregorian date range */
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+function persianMonths(count) {
+  const out = [], key = d => { const g = dateParts(d, 'en-u-ca-persian', { year: 'numeric', month: 'numeric' }); return g('year') + '-' + g('month'); };
+  const d = new Date(); d.setHours(12, 0, 0, 0);
+  let cur = null;
+  for (let i = 0; i < 520 && out.length <= count; i++, d.setDate(d.getDate() + 1)) {
+    const k = key(d);
+    if (!cur || cur.k !== k) { cur = { k, start: new Date(d), end: new Date(d) }; out.push(cur); } else cur.end = new Date(d);
+  }
+  if (out.length && (out[0].end - out[0].start) / 864e5 < 9) out.shift();   // drop a nearly-finished current month
+  return out.slice(0, count);
+}
+function buildMonths() {
+  const sel = $('#movein'); if (!sel) return;
+  const keep = sel.value;
+  sel.innerHTML = '';
+  sel.add(new Option(t('mv_choose'), ''));
+  sel.add(new Option(t('mv_asap'), 'As soon as possible'));
+  let months;
+  try { months = persianMonths(15); } catch (e) { months = []; }
+  months.forEach(m => {
+    const pEn = dateParts(m.start, 'en-GB-u-ca-persian', { month: 'long', year: 'numeric' });
+    const value = `${pEn('month')} ${pEn('year')} (${iso(m.start)} to ${iso(m.end)})`;
+    let label;
+    if (lang === 'fa') {
+      const p = dateParts(m.start, 'fa-IR-u-ca-persian', { month: 'long', year: 'numeric' });
+      const a = dateParts(m.start, 'fa-IR-u-ca-gregory', LONG), b = dateParts(m.end, 'fa-IR-u-ca-gregory', LONG);
+      label = `${p('month')} ${p('year')} (${a('day')} ${a('month')} – ${b('day')} ${b('month')} ${b('year')})`;
+    } else {
+      const a = dateParts(m.start, 'en-GB', LONG), b = dateParts(m.end, 'en-GB', LONG);
+      label = `${a('day')} ${a('month').slice(0, 3)} – ${b('day')} ${b('month').slice(0, 3)} ${b('year')} (${pEn('month')} ${pEn('year')})`;
+    }
+    sel.add(new Option(label, value));
+  });
+  if (keep) sel.value = keep;
+}
+/* Pre-filled WhatsApp messages */
+function renderWa() { $$('[data-wa]').forEach(a => { a.href = 'https://wa.me/34614066200?text=' + encodeURIComponent(t(a.dataset.wa)); }); }
+
+/* ── i18n (Persian lives in the HTML) ── */
+const FA = {};
+$$('[data-i18n]').forEach(el => { FA[el.dataset.i18n] ??= el.innerHTML; });
+$$('[data-i18n-ph]').forEach(el => { FA[el.dataset.i18nPh] = el.placeholder; });
+$$('[data-i18n-alt]').forEach(el => { FA[el.dataset.i18nAlt] = el.alt; });
+$$('[data-i18n-aria]').forEach(el => { FA[el.dataset.i18nAria] = el.getAttribute('aria-label'); });
+Object.assign(FA, FA_EXTRA);
+const FA_TITLE = document.title;
+let lang = 'fa';
+const t = k => (lang === 'en' ? EN : FA)[k];
+function setLang(l) {
+  lang = l;
+  document.documentElement.lang = l; document.documentElement.dir = l === 'fa' ? 'rtl' : 'ltr';
+  const d = l === 'en' ? EN : FA;
+  $$('[data-i18n]').forEach(el => { const v = d[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
+  $$('[data-i18n-ph]').forEach(el => { const v = d[el.dataset.i18nPh]; if (v != null) el.placeholder = v; });
+  $$('[data-i18n-alt]').forEach(el => { const v = d[el.dataset.i18nAlt]; if (v != null) el.alt = v; });
+  $$('[data-i18n-aria]').forEach(el => { const v = d[el.dataset.i18nAria]; if (v != null) el.setAttribute('aria-label', v); });
+  buildMonths(); renderUpdated(); renderWa();
+  const fm = $('#formMsg'); if (fm) fm.style.display = 'none';
+  document.title = l === 'en' ? 'Find a home in Madrid | Novarexium Group' : FA_TITLE;
+  $('#langLabel').textContent = l === 'fa' ? 'EN' : 'فا';
+  $('#langBtn').setAttribute('aria-label', l === 'fa' ? 'Switch to English' : 'تغییر به فارسی');
+  $('#langField').value = l;
+  $$('.p-labels .n').forEach((n, i) => n.textContent = l === 'fa' ? faDigits(i + 1) : i + 1);
+  $$('.h-steps b').forEach((n, i) => n.textContent = l === 'fa' ? faDigits(i + 1) : i + 1);
+  renderCounters(); updateNav();
+  try { localStorage.setItem('bg-lang', l); } catch (e) {}
+}
+$('#langBtn').addEventListener('click', () => setLang(lang === 'fa' ? 'en' : 'fa'));
+
+/* ── Counters ── */
+const limits = { adults: [1, 10], children: [0, 10] };
+function renderCounters() {
+  ['adults', 'children'].forEach(id => { const v = $('#' + id).value; $('#' + id + 'Out').textContent = lang === 'fa' ? faDigits(v) : v; });
+  $('#agesQ').hidden = +$('#children').value === 0;
+}
+$$('[data-step-btn]').forEach(b => b.addEventListener('click', () => {
+  const id = b.dataset.for, inp = $('#' + id), [mn, mx] = limits[id];
+  inp.value = Math.min(mx, Math.max(mn, +inp.value + (b.dataset.stepBtn === '+' ? 1 : -1)));
+  renderCounters();
+}));
+
+/* ── Rent / buy budget switch ── */
+function syncBudget() {
+  const deal = ($('input[name="Rent_or_buy"]:checked') || {}).value;
+  const buy = deal === 'Buy';
+  const showRent = !buy, other = buy ? $('#budgetRent') : $('#budgetBuy');
+  if (other.hidden === false) $$('input', other).forEach(i => i.checked = false);
+  $('#budgetRent').hidden = !showRent; $('#budgetBuy').hidden = showRent;
+}
+$$('input[name="Rent_or_buy"]').forEach(r => r.addEventListener('change', syncBudget));
+
+/* ── Wizard ── */
+const steps = $$('.step'), labels = $$('.p-labels li');
+let cur = 0;
+function updateNav() {
+  steps.forEach((s, i) => s.classList.toggle('is-on', i === cur));
+  labels.forEach((l, i) => { l.classList.toggle('is-on', i === cur); l.classList.toggle('is-done', i < cur); });
+  $('#pFill').style.width = ((cur + 1) / steps.length * 100) + '%';
+  $('#prevBtn').hidden = cur === 0;
+  $('#nextBtn').hidden = cur === steps.length - 1;
+  $('#submitBtn').hidden = cur !== steps.length - 1;
+  const n = cur + 1, tot = steps.length;
+  $('#stepCount').textContent = lang === 'fa' ? `مرحله ${faDigits(n)} از ${faDigits(tot)}` : `Step ${n} of ${tot}`;
+}
+function validate(step) {
+  let firstBad = null;
+  $$('[data-req]', step).forEach(q => {
+    if (q.hidden || q.closest('[hidden]')) { q.classList.remove('has-error'); return; }
+    let ok = true;
+    const type = q.dataset.req;
+    if (type === 'text') { const i = $('input, textarea', q); ok = i.value.trim().length > 1; i.setAttribute('aria-invalid', !ok); }
+    if (type === 'phone') { const i = $('input', q); ok = latinDigits(i.value).replace(/\D/g, '').length >= 8; i.setAttribute('aria-invalid', !ok); }
+    if (type === 'select') { const i = $('select', q); ok = i.value !== ''; i.setAttribute('aria-invalid', !ok); }
+    if (type === 'radio' || type === 'check') ok = !!$(`input[name="${q.dataset.name}"]:checked`, q);
+    if (type === 'consent') ok = $('#consent').checked;
+    q.classList.toggle('has-error', !ok);
+    if (!ok && !firstBad) firstBad = q;
+  });
+  if (firstBad) { firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' }); const f = $('input:not([type=hidden]), textarea', firstBad); if (f) setTimeout(() => f.focus({ preventScroll: true }), 300); }
+  return !firstBad;
+}
+$$('[data-req]').forEach(q => q.addEventListener('input', () => { if (q.classList.contains('has-error')) validate(q.closest('.step')); }));
+$$('[data-req]').forEach(q => q.addEventListener('change', () => { if (q.classList.contains('has-error')) validate(q.closest('.step')); }));
+function go(n) {
+  cur = n; updateNav();
+  const top = $('.wizard').getBoundingClientRect().top + scrollY - 90;
+  if (scrollY > top) scrollTo({ top, behavior: 'smooth' });
+  const h = $('h2', steps[cur]); h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true });
+}
+$('#nextBtn').addEventListener('click', () => { if (validate(steps[cur])) go(cur + 1); });
+$('#prevBtn').addEventListener('click', () => go(cur - 1));
+
+/* Combine multi-select checkboxes into one readable field per group */
+function buildData(form) {
+  const fd = new FormData(), groups = {};
+  for (const [k, v] of new FormData(form).entries()) {
+    if (form.querySelectorAll(`input[type=checkbox][name="${k}"]`).length > 1) (groups[k] ||= []).push(v);
+    else if (v !== '') fd.append(k, v);
+  }
+  Object.entries(groups).forEach(([k, arr]) => fd.append(k, arr.join(', ')));
+  return fd;
+}
+$('#housingForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  // Enter on an earlier step moves forward instead of sending
+  if (cur < steps.length - 1) { if (validate(steps[cur])) go(cur + 1); return; }
+  // Final check of every step before sending
+  for (let i = 0; i < steps.length; i++) { if (!validate(steps[i])) { if (i !== cur) { go(i); validate(steps[i]); } return; } }
+  const btn = $('#submitBtn'), msg = $('#formMsg'), lbl = $('span', btn);
+  msg.style.display = 'none'; btn.disabled = true; lbl.textContent = t('sending');
+  try {
+    const res = await fetch('https://formspree.io/f/xyklpkba', { method: 'POST', body: buildData(e.target), headers: { Accept: 'application/json' } });
+    if (!res.ok) throw new Error(res.status);
+    e.target.style.display = 'none'; $('#progress').style.display = 'none';
+    const d = $('#done'); d.classList.add('is-on'); d.focus();
+  } catch (err) { msg.innerHTML = t('err_send'); msg.style.display = 'block'; }
+  finally { btn.disabled = false; lbl.innerHTML = t('b_send'); }
+});
+
+/* Reveal */
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } }), { threshold: .12 }) : null;
+$$('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('is-in'));
+
+/* Init */
+let saved = null; try { saved = localStorage.getItem('bg-lang'); } catch (e) {}
+const qLang = new URLSearchParams(location.search).get('lang');
+if ((qLang || saved) === 'en') setLang('en'); else { renderCounters(); updateNav(); buildMonths(); renderUpdated(); renderWa(); }
+</script>
+<style>.pv-badge{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:9999;background:#2A211C;color:#D9B68F;font:600 12.5px/1 Vazirmatn,system-ui,sans-serif;padding:7px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);pointer-events:none;letter-spacing:.02em}</style>
+<div class="pv-badge" aria-hidden="true">پیش‌نمایش · Preview</div></body>
+</html>
