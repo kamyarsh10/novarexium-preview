@@ -103,6 +103,11 @@ html[lang="en"] h3 { line-height: 1.3; }
 .btn--gold:hover::after { background-position: -50% 0; }
 .btn--glass { background: rgba(255,255,255,.1); color: var(--ivory); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.35); backdrop-filter: blur(8px); }
 .btn--glass:hover { background: rgba(255,255,255,.18); }
+.btn--home { position: relative; background: var(--ivory); color: var(--night); box-shadow: inset 0 0 0 2px var(--saffron-2), 0 10px 30px -10px rgba(217,182,143,.8); font-weight: 800; }
+.btn--home:hover { background: var(--white); }
+.btn--home::after { content: ""; position: absolute; inset: -6px; border-radius: inherit; box-shadow: 0 0 0 2px var(--saffron-2); opacity: 0; animation: homePulse 2.4s ease-out infinite; pointer-events: none; }
+@keyframes homePulse { 0% { opacity: .8; transform: scale(.96); } 100% { opacity: 0; transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .btn--home::after { animation: none; } }
 .btn--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px rgba(22,36,43,.25); }
 .btn--line:hover { box-shadow: inset 0 0 0 1.5px var(--ink); }
 .btn:active { transform: scale(.97); }
@@ -574,6 +579,11 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
   .mq-track [aria-hidden="true"] { display: none; }
   .marquee { -webkit-mask: none; mask: none; }
 }
+.page-hero { background: linear-gradient(180deg, #1C1511, #3B2E26 75%, #4A3A2F); color: var(--ivory); padding: 150px 0 70px; text-align: center; }
+.page-hero h1 { color: var(--ivory); font-size: clamp(32px, 4.4vw, 56px); margin: 0; }
+.page-hero .crumb { display: inline-block; margin-bottom: 14px; color: var(--saffron-2); font-size: 15px; text-decoration: none; }
+.page-hero .crumb:hover { text-decoration: underline; }
+.nav a[aria-current="page"] { color: var(--saffron-2); }
 </style>
 </head>
 <body>
@@ -630,11 +640,11 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
       <span class="brand-txt"><span class="brand-name">NOVAREXIUM</span><span class="brand-sub">GROUP</span></span>
     </a>
     <nav class="nav" id="nav" aria-label="منوی اصلی" data-i18n-aria="a_nav">
-      <a href="#services" data-i18n="nav_services">خدمات</a>
-      <a href="#pathways" data-i18n="nav_pathways">مسیرهای اقامت</a>
-      <a href="#career" data-i18n="nav_career">کار و حقوق</a>
-      <a href="#edu" data-i18n="nav_edu">تحصیل</a>
-      <a href="#life" data-i18n="nav_life">زندگی در اسپانیا</a>
+      <a href="services.html" data-i18n="nav_services">خدمات</a>
+      <a href="pathways.html" data-i18n="nav_pathways">مسیرهای اقامت</a>
+      <a href="career.html" data-i18n="nav_career">کار و حقوق</a>
+      <a href="education.html" data-i18n="nav_edu">تحصیل</a>
+      <a href="life.html" data-i18n="nav_life">زندگی در اسپانیا</a>
       <a href="housing.html" class="nav-hl" data-i18n="nav_housing">پیدا کردن خانه</a>
     </nav>
     <div class="hdr-actions">
@@ -671,7 +681,8 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
       <p class="hero-lead" data-anim="hero" data-i18n="hero_desc">مشاوره اختصاصی مهاجرت، اقامت و آینده شغلی در اسپانیا برای خانواده‌های ایرانی و جامعه فارسی‌زبان؛ از گرفتن ویزا تا پیدا کردن خانه و راه‌اندازی کسب‌وکار، کنار شما هستیم.</p>
       <div class="hero-actions" data-anim="hero">
         <a class="btn btn--gold magnet" href="#consult"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="hero_cta1">رزرو مشاوره رایگان</span></a>
-        <a class="btn btn--glass magnet" href="#pathways" data-i18n="hero_cta2">دیدن روش‌های اقامت</a>
+        <a class="btn btn--home magnet" href="housing.html"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="hero_cta3">پیدا کردن خانه در مادرید</span></a>
+        <a class="btn btn--glass magnet" href="pathways.html" data-i18n="hero_cta2">دیدن روش‌های اقامت</a>
       </div>
       <ul class="assure" data-anim="hero">
         <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="tr1">مشاوره حقوقی رسمی</span></li>
@@ -703,54 +714,9 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
   </div>
 </section>
 
-<!-- ═══════════ SERVICES ═══════════ -->
-<section class="sec services" id="services">
+<!-- ═══════════ HOME SHOWCASE ═══════════ -->
+<section class="sec services" id="home-showcase">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg></div>
-      <h2 class="display" data-i18n="srv_title">هر آنچه برای شروع زندگی تازه لازم دارید</h2>
-      <p data-i18n="srv_lead">مهاجرت فقط گرفتن ویزا نیست. از بررسی پرونده تا پیدا کردن خانه و راه‌اندازی کسب‌وکار، کنار شما و خانواده‌تان هستیم.</p>
-    </div>
-
-    <div class="svc-grid" data-stagger>
-      <article class="svc">
-        <div class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></div>
-        <h3 data-i18n="c1_t">اقامت و ویزا</h3>
-        <p data-i18n="c1_d">تحلیل و طراحی مسیر اقامت (دیجیتال نومد، تمکن مالی، ویزای تحصیلی) بر اساس پروفایل واقعی شما.</p>
-        <a class="svc-link" href="#consult" data-service="General"><span data-i18n="svc_cta">مشاوره درباره این خدمت</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="svc">
-        <div class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg></div>
-        <h3 data-i18n="c6_t">اسکان و پیدا کردن خانه</h3>
-        <p data-i18n="c6_d">از انتخاب محله و مدرسه فرزندان تا بیمه و اجاره خانه؛ همراهی شما بعد از ورود به اسپانیا.</p>
-        <a class="svc-link" href="#consult" data-service="Relocation/Housing"><span data-i18n="svc_cta">مشاوره درباره این خدمت</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="svc">
-        <div class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-case"/></svg></div>
-        <h3 data-i18n="c3_t">ثبت شرکت</h3>
-        <p data-i18n="c3_d">طراحی ساختار شرکت، حساب بانکی و مالیات برای کارآفرینان و کسب‌وکارهای بین‌المللی.</p>
-        <a class="svc-link" href="#consult" data-service="Company/Startup"><span data-i18n="svc_cta">مشاوره درباره این خدمت</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="svc">
-        <div class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg></div>
-        <h3 data-i18n="c2_t">سرمایه‌گذاری ملک</h3>
-        <p data-i18n="c2_d">انتخاب شهر، نوع ملک و ساختار حقوقی با نگاه ترکیبیِ «زندگی مرفه + بازده سرمایه بالا».</p>
-        <a class="svc-link" href="#consult" data-service="Property"><span data-i18n="svc_cta">مشاوره درباره این خدمت</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="svc">
-        <div class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg></div>
-        <h3 data-i18n="c4_t">تحصیل و آینده</h3>
-        <p data-i18n="c4_d">انتخاب دانشگاه و دوره‌های زبان برای ساختن مسیر بلندمدت و ورود هوشمندانه به بازار کار.</p>
-        <a class="svc-link" href="#consult" data-service="Student Visa"><span data-i18n="svc_cta">مشاوره درباره این خدمت</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="svc">
-        <div class="svc-ic"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></div>
-        <h3 data-i18n="c5_t">امور مالی و بانکی</h3>
-        <p data-i18n="c5_d">افتتاح حساب بانکی بین‌المللی، فهم دقیق مالیات و برنامه‌ریزی انتقال پول بین ایران و اسپانیا.</p>
-        <a class="svc-link" href="#consult" data-service="General"><span data-i18n="svc_cta">مشاوره درباره این خدمت</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </article>
-    </div>
-
     <div class="showcase" data-stagger>
       <a class="show-card" href="housing.html">
         <img src="new-home.jpg" width="1200" height="896" loading="lazy" alt="خانواده‌ای کلید خانه جدیدشان در اسپانیا را از مشاور تحویل می‌گیرند" data-i18n-alt="sh1_alt">
@@ -812,266 +778,6 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
     </article>
   </div>
   <div class="j-route" aria-hidden="true"><span class="j-line"></span><span class="j-fill"></span><span class="j-plane"><svg class="ic"><use href="#i-plane"/></svg></span></div>
-</section>
-
-<!-- ═══════════ PATHWAYS ═══════════ -->
-<section class="sec" id="pathways">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg></div>
-      <h2 class="display" data-i18n="pw_title">مسیرهای اصلی اقامت</h2>
-      <p data-i18n="pw_lead">شرایط هر خانواده متفاوت است. سه مسیر اصلی اقامت و همراهی ما در خرید ملک را ببینید و برای انتخاب درست با ما مشورت کنید.</p>
-    </div>
-
-    <div class="pstack" id="pstack">
-      <article class="pcard pcard--night" style="--i:0">
-        <div class="wm" aria-hidden="true"><svg class="ic"><use href="#i-laptop"/></svg></div>
-        <div>
-          <span class="tag" data-i18n="t_nomad">دیجیتال نومد</span>
-          <h3 data-i18n="nomad_t">ویزای دیجیتال نومد (Digital Nomad)</h3>
-          <p data-i18n="nomad_d">جذاب‌ترین و پرمخاطب‌ترین مسیر مهاجرتی فعلی اسپانیا. مخصوص کسانی که به صورت ریموت برای شرکت‌های خارج از اسپانیا کار می‌کنند یا فریلنسرهای بین‌المللی که می‌خواهند از کیفیت زندگی اسپانیا لذت ببرند.</p>
-          <ul class="ticks">
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nomad_1">دریافت اقامت ۳ ساله از همان ابتدا (قابل تمدید تا ۵ سال و دریافت اقامت دائم).</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nomad_2">بهره‌مندی از مزایای ویژه مالیاتی در صورت واجد شرایط بودن (قانون بکهام).</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nomad_3">همراهی همزمان همسر و فرزندان، با اجازه کار کامل و بدون محدودیت برای همسر.</span></li>
-          </ul>
-        </div>
-        <aside class="fact">
-          <div><div class="fact-label" data-i18n="nomad_fl">مدت اقامت اولیه</div><div class="fact-value" data-i18n="nomad_fv">۳ سال، قابل تمدید</div></div>
-          <a class="btn btn--gold" href="#consult" data-service="Digital Nomad" data-i18n="ask">درخواست مشاوره برای این مسیر</a>
-          <a class="wa-link" data-wa="wa_nomad" href="https://wa.me/34614066200" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#i-wa"/></svg><span data-i18n="wa_ask">پرسش سریع در واتساپ</span></a>
-        </aside>
-      </article>
-
-      <article class="pcard pcard--sand" style="--i:1">
-        <div class="wm" aria-hidden="true"><svg class="ic"><use href="#i-building"/></svg></div>
-        <div>
-          <span class="tag" data-i18n="t_golden">خرید ملک</span>
-          <h3 data-i18n="golden_t">خرید ملک و سرمایه‌گذاری در اسپانیا</h3>
-          <p data-i18n="golden_d">خانه‌ای برای زندگی یا ملکی برای سرمایه‌گذاری؛ از انتخاب شهر و محله تا بررسی حقوقی و تحویل کلید، <b>در تمام مراحل خرید</b> کنار شما و خانواده‌تان هستیم.</p>
-          <ul class="ticks">
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="golden_1">انتخاب شهر، محله و نوع ملک با نگاه ترکیبیِ «زندگی مرفه + بازده سرمایه بالا».</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="golden_2">بررسی قرارداد و مدارک ملک همراه با وکلای اسپانیایی.</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="golden_3">امکان خرید یک یا چند ملک مسکونی یا تجاری.</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="golden_4"><b>توجه:</b> خرید ملک به‌تنهایی اقامت نمی‌دهد؛ معمولاً همراه با یکی از مسیرهای اقامتی انجام می‌شود.</span></li>
-          </ul>
-        </div>
-        <aside class="fact">
-          <div><div class="fact-label" data-i18n="golden_fl">همراهی کامل</div><div class="fact-value" data-i18n="golden_fv">از انتخاب شهر تا تحویل کلید</div></div>
-          <a class="btn btn--gold" href="#consult" data-service="Property" data-i18n="ask">درخواست مشاوره برای این مسیر</a>
-          <a class="wa-link" data-wa="wa_property" href="https://wa.me/34614066200" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#i-wa"/></svg><span data-i18n="wa_ask">پرسش سریع در واتساپ</span></a>
-        </aside>
-      </article>
-
-      <article class="pcard pcard--teal" style="--i:2">
-        <div class="wm" aria-hidden="true"><svg class="ic"><use href="#i-coins"/></svg></div>
-        <div>
-          <span class="tag" data-i18n="t_nonluc">تمکن مالی</span>
-          <h3 data-i18n="nonluc_t">اقامت تمکن مالی (Non-Lucrative)</h3>
-          <p data-i18n="nonluc_d">برای متقاضیانی که <b>درآمد ثابت و غیرفعال (Passive Income)</b> در کشور مبدا دارند — مانند سود سپرده، اجاره ملک یا حقوق بازنشستگی — و نیازی به کار کردن در بازار کار اسپانیا ندارند. یکی از محبوب‌ترین و امن‌ترین راه‌ها برای خانواده‌ها.</p>
-          <ul class="ticks">
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nonluc_1">بدون نیاز به سرمایه‌گذاری سنگین و انتقال ارز زیاد.</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nonluc_2">امکان ثبت‌نام فرزندان در بهترین مدارس بین‌المللی و دولتی اسپانیا.</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nonluc_3">پس از سال اول، امکان تبدیل به اقامت کاری یا ثبت شرکت وجود دارد.</span></li>
-          </ul>
-        </div>
-        <aside class="fact">
-          <div><div class="fact-label" data-i18n="nonluc_fl">مناسب برای</div><div class="fact-value" data-i18n="nonluc_fv">خانواده‌هایی با درآمد غیرفعال</div></div>
-          <a class="btn btn--gold" href="#consult" data-service="Non-Lucrative" data-i18n="ask">درخواست مشاوره برای این مسیر</a>
-          <a class="wa-link" data-wa="wa_nonluc" href="https://wa.me/34614066200" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#i-wa"/></svg><span data-i18n="wa_ask">پرسش سریع در واتساپ</span></a>
-        </aside>
-      </article>
-
-      <article class="pcard pcard--sage" style="--i:3">
-        <div class="wm" aria-hidden="true"><svg class="ic"><use href="#i-cap"/></svg></div>
-        <div>
-          <span class="tag" data-i18n="t_student">ویزای تحصیلی</span>
-          <h3 data-i18n="student_t">ویزای تحصیلی و دانشجویی</h3>
-          <p data-i18n="student_d">مسیری هوشمندانه و کم‌هزینه برای ورود به اروپا. با پذیرش در دانشگاه‌ها یا کالج‌های زبان مورد تایید، ویزای بلندمدت می‌گیرید و مسیر تبدیل آن به اقامت کاری پس از فارغ‌التحصیلی هموار است. از ثبت‌نام تا دریافت ویزا، مرحله به مرحله همراهتان هستیم.</p>
-          <ul class="ticks">
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="student_1">اجازه کار پاره‌وقت (تا ۳۰ ساعت در هفته) برای پوشش هزینه‌های زندگی.</span></li>
-            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="student_2">هزینه تحصیل در دانشگاه‌های دولتی اسپانیا بسیار مقرون‌به‌صرفه است.</span></li>
-          </ul>
-        </div>
-        <aside class="fact">
-          <div><div class="fact-label" data-i18n="student_fl">شهریه سالانه دانشگاه دولتی</div><div class="fact-value"><span class="ltr">€700 – €3,500</span></div></div>
-          <a class="btn btn--gold" href="#consult" data-service="Student Visa" data-i18n="ask">درخواست مشاوره برای این مسیر</a>
-          <a class="wa-link" data-wa="wa_student" href="https://wa.me/34614066200" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#i-wa"/></svg><span data-i18n="wa_ask">پرسش سریع در واتساپ</span></a>
-        </aside>
-      </article>
-    </div>
-
-    <div class="cmp-wrap" data-reveal>
-      <h3 data-i18n="cmp_t">مقایسه سریع مسیرها</h3>
-      <div class="cmp-scroll">
-        <table class="cmp">
-          <thead><tr>
-            <th scope="col" data-i18n="cmp_h0">مسیر</th>
-            <th scope="col" data-i18n="t_nomad">دیجیتال نومد</th>
-            <th scope="col" data-i18n="t_nonluc">تمکن مالی</th>
-            <th scope="col" data-i18n="t_student">ویزای تحصیلی</th>
-            <th scope="col" data-i18n="t_golden">خرید ملک</th>
-          </tr></thead>
-          <tbody>
-            <tr><th scope="row" data-i18n="cmp_r1">مناسب برای</th><td data-i18n="cmp_r1a">دورکارها و فریلنسرهایی که برای شرکت‌های خارجی کار می‌کنند</td><td data-i18n="cmp_r1b">خانواده‌های دارای درآمد غیرفعال یا پس‌انداز</td><td data-i18n="cmp_r1c">پذیرفته‌شدگان دانشگاه یا دوره‌های معتبر</td><td data-i18n="cmp_r1d">خریداران خانه و سرمایه‌گذاران ملک</td></tr>
-            <tr><th scope="row" data-i18n="cmp_r2">کار در اسپانیا</th><td data-i18n="cmp_r2a">دورکاری برای کارفرمای خارجی</td><td class="no" data-i18n="cmp_r2b">مجاز نیست</td><td data-i18n="cmp_r2c">پاره‌وقت، تا ۳۰ ساعت در هفته</td><td>—</td></tr>
-            <tr><th scope="row" data-i18n="cmp_r3">همراهی خانواده</th><td class="yes" data-i18n="cmp_yes">بله</td><td class="yes" data-i18n="cmp_yes">بله</td><td data-i18n="cmp_r3c">در برنامه‌های مناسب</td><td>—</td></tr>
-            <tr><th scope="row" data-i18n="cmp_r4">اقامت می‌دهد؟</th><td class="yes" data-i18n="cmp_yes">بله</td><td class="yes" data-i18n="cmp_yes">بله</td><td class="yes" data-i18n="cmp_r4c">بله، برای مدت تحصیل</td><td class="no" data-i18n="cmp_r4d">خیر؛ خرید ملک به‌تنهایی اقامت نمی‌دهد</td></tr>
-            <tr><th scope="row" data-i18n="cmp_r5">مسیر اقامت دائم</th><td data-i18n="cmp_r5a">پس از ۵ سال اقامت قانونی</td><td data-i18n="cmp_r5a">پس از ۵ سال اقامت قانونی</td><td data-i18n="cmp_r5c">معمولاً پس از تبدیل به اقامت کاری</td><td>—</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="cmp-foot">
-        <span data-i18n="cmp_note">این جدول یک راهنمای کلی است و جایگزین مشاوره حقوقی نیست؛ قوانین و شرایط هر سال به‌روز می‌شوند.</span>
-        <span class="updated" data-updated="2026-10-22"></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ CAREERS ═══════════ -->
-<section class="sec career" id="career">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg></div>
-      <h2 class="display" data-i18n="car_title">کار و حقوق در اسپانیا</h2>
-      <p data-i18n="car_lead">تصویری واقعی از بازار کار اسپانیا: حقوق‌ها، مزایا و آنچه برای پیدا کردن کار لازم دارید.</p>
-    </div>
-
-    <div class="career-grid">
-      <div class="panel" data-reveal>
-        <div class="panel-head"><span class="bubble"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg></span><h3 data-i18n="sal_t">حقوق خالص ماهانه (میانگین)</h3></div>
-        <div class="ranges" data-bars>
-          <div class="range"><span class="lbl" data-i18n="j_it">آی‌تی و برنامه‌نویسی</span><span class="track"><span class="bar open" style="--from:41.7%;--w:25%"></span></span><span class="val">€2,500 – €4,000+</span></div>
-          <div class="range"><span class="lbl" data-i18n="j_den">دندانپزشکی (پس از معادل‌سازی)</span><span class="track"><span class="bar open" style="--from:50%;--w:41.7%"></span></span><span class="val">€3,000 – €5,500+</span></div>
-          <div class="range"><span class="lbl" data-i18n="j_com">فروش و بازرگانی</span><span class="track"><span class="bar" style="--from:30%;--w:20%"></span></span><span class="val">€1,800 – €3,000</span></div>
-          <div class="range"><span class="lbl" data-i18n="j_des">طراحی گرافیک</span><span class="track"><span class="bar" style="--from:25%;--w:16.7%"></span></span><span class="val">€1,500 – €2,500</span></div>
-          <div class="range"><span class="lbl" data-i18n="j_adm">اداری و دفتری</span><span class="track"><span class="bar" style="--from:20%;--w:10%"></span></span><span class="val">€1,200 – €1,800</span></div>
-        </div>
-        <p class="scale-note" data-i18n="sal_note">طول نوارها روی مقیاس ۰ تا ۶٬۰۰۰ یورو است.</p>
-        <span class="updated" data-updated="2026-10-22"></span>
-      </div>
-
-      <div>
-        <h3 data-reveal style="margin-bottom:16px" data-i18n="ben_t">مزایا و ساعات کاری</h3>
-        <ul class="perks" data-stagger>
-          <li><span class="pi"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span data-i18n="ben1">۴۰ ساعت در هفته (برنامه سی‌یستا با استراحت ۲ تا ۴، یا برنامه مدرن ۸ تا ۴).</span></li>
-          <li><span class="pi"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></span><span data-i18n="ben2">۳۰ روز مرخصی با حقوق در سال.</span></li>
-          <li><span class="pi"><svg class="ic" aria-hidden="true"><use href="#i-pulse"/></svg></span><span data-i18n="ben3">بیمه درمانی کامل و بازنشستگی دولتی خودکار.</span></li>
-          <li><span class="pi"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><span data-i18n="ben4">قراردادهای رسمی و شفاف طبق قانون کار.</span></li>
-          <li><span class="pi"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg></span><span data-i18n="ben5">امکان بالای دورکاری در مشاغل مدرن.</span></li>
-        </ul>
-        <div class="hunt" data-reveal>
-          <h3 data-i18n="jh_t">کاریابی و نکات مهم</h3>
-          <ul class="chips"><li>LinkedIn</li><li>InfoJobs</li><li>Indeed</li><li>Tecnoempleo</li></ul>
-          <ul class="dots">
-            <li data-i18n="jh1">نوشتن رزومه مطابق استانداردهای رسمی اسپانیا ضروری است.</li>
-            <li data-i18n="jh2">سطح زبان اسپانیایی حداقل B1.</li>
-            <li data-i18n="jh3">پروفایل لینکدین بهینه و حرفه‌ای.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ STUDY ═══════════ -->
-<section class="sec" id="edu">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg></div>
-      <h2 class="display" data-i18n="edu_title">تحصیل در اسپانیا</h2>
-      <p data-i18n="edu_lead">دانشگاه‌های معتبر، شهریه منطقی و مسیری روشن به سمت اقامت دائم اروپا.</p>
-    </div>
-    <div class="study-grid" data-stagger>
-      <div class="card">
-        <h3 data-i18n="cost_t">هزینه‌های تحصیل (سالانه)</h3>
-        <div data-bars>
-          <div class="range"><span class="lbl" data-i18n="c_pub">دانشگاه‌های دولتی</span><span class="val">€700 – €3,500</span><span class="track"><span class="bar" style="--from:2.3%;--w:9.4%"></span></span></div>
-          <div class="range"><span class="lbl" data-i18n="c_pri">دانشگاه‌های خصوصی</span><span class="val">€7,000 – €18,000</span><span class="track"><span class="bar" style="--from:23.3%;--w:36.7%"></span></span></div>
-          <div class="range"><span class="lbl" data-i18n="c_med">پزشکی و دندانپزشکی</span><span class="val">€20,000 – €28,000</span><span class="track"><span class="bar" style="--from:66.7%;--w:26.6%"></span></span></div>
-        </div>
-        <span class="updated" data-updated="2026-10-22"></span>
-      </div>
-      <div class="card">
-        <h3 data-i18n="lang_t">شرایط زبان</h3>
-        <ul class="dots">
-          <li data-i18n="l1"><b>اسپانیایی:</b> سطح B1 یا B2.</li>
-          <li data-i18n="l2"><b>انگلیسی:</b> آیلتس ۶٫۰ تا ۶٫۵.</li>
-          <li data-i18n="l3"><b>دوره‌های دوزبانه:</b> ترکیبی از هر دو.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3 data-i18n="edb_t">مزایای دانشجویی</h3>
-        <ul class="dots">
-          <li data-i18n="eb1">کار پاره‌وقت قانونی تا ۳۰ ساعت در هفته.</li>
-          <li data-i18n="eb2">استرس تحصیلی کمتر نسبت به آمریکا و انگلستان.</li>
-          <li data-i18n="eb3">مسیر اقامت دائم اتحادیه اروپا.</li>
-          <li data-i18n="eb4">امکان همراهی خانواده در برنامه‌های مناسب.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="marquee" data-reveal>
-      <p class="marquee-head" data-i18n="deg_t">رشته‌های دانشگاهی پرتقاضا</p>
-      <div class="mq-track">
-        <span data-i18n="dp1">پزشکی و دندانپزشکی</span><span data-i18n="dp2">اقتصاد و مدیریت</span><span data-i18n="dp3">معماری</span><span data-i18n="dp4">مد و طراحی گرافیک</span><span data-i18n="dp5">هوش مصنوعی و آی‌تی</span><span data-i18n="dp6">گردشگری و هتلداری</span>
-        <span aria-hidden="true" data-i18n="dp1">پزشکی و دندانپزشکی</span><span aria-hidden="true" data-i18n="dp2">اقتصاد و مدیریت</span><span aria-hidden="true" data-i18n="dp3">معماری</span><span aria-hidden="true" data-i18n="dp4">مد و طراحی گرافیک</span><span aria-hidden="true" data-i18n="dp5">هوش مصنوعی و آی‌تی</span><span aria-hidden="true" data-i18n="dp6">گردشگری و هتلداری</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ LIFE ═══════════ -->
-<section class="sec life" id="life">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div class="ornament" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg></div>
-      <h2 class="display" data-i18n="life_title">زندگی در اسپانیا</h2>
-      <p data-i18n="life_lead">کشوری آفتابی، خانواده‌محور و امن؛ جایی که فرهنگ ایرانی خیلی زود در آن احساس خانه می‌کند.</p>
-    </div>
-    <div class="life-grid" data-stagger>
-      <div class="tile tile--teal">
-        <span class="tic"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></span>
-        <h3 data-i18n="ls_t">فرهنگ و سبک زندگی</h3>
-        <ul class="dots">
-          <li data-i18n="ls1">محیطی آرام، اجتماعی، شاد و خوش‌برخورد.</li>
-          <li data-i18n="ls2">خانواده‌محور و بسیار سازگار با فرهنگ ایرانی.</li>
-          <li data-i18n="ls3">صبح‌های آرام، سی‌یستا و شب‌های پرنشاط شهری.</li>
-        </ul>
-      </div>
-      <div class="tile tile--light tile--wide">
-        <span class="tic"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg></span>
-        <h3 data-i18n="lc_t">هزینه‌های زندگی</h3>
-        <div class="cities">
-          <div class="city-c"><b>€1,500+</b><span data-i18n="lc2">مادرید و بارسلونا، در ماه</span></div>
-          <div class="city-c"><b>€1,000+</b><span data-i18n="lc3">والنسیا، مالاگا و سویا، در ماه</span></div>
-          <div class="city-c"><b>€1,000–1,500</b><span data-i18n="lc4">میانگین یک نفر در شهر متوسط</span></div>
-        </div>
-        <p class="sub" data-i18n="lc1">ارزان‌تر از شمال اروپا و متعادل نسبت به کیفیت زندگی در اتحادیه اروپا.</p>
-        <span class="updated" data-updated="2026-10-22"></span>
-      </div>
-      <div class="tile tile--light">
-        <span class="tic"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span>
-        <h3 data-i18n="lsec_t">امنیت و سیستم درمانی</h3>
-        <ul class="dots">
-          <li data-i18n="lsec1">از امن‌ترین کشورهای اروپا با نرخ بسیار پایین جرایم خشن.</li>
-          <li data-i18n="lsec2">یکی از برترین سیستم‌های درمانی اروپا با پوشش جامع دولتی.</li>
-        </ul>
-      </div>
-      <div class="tile tile--night tile--wide">
-        <span class="tic"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg></span>
-        <h3 data-i18n="cli_t">آب‌وهوای مناطق مختلف</h3>
-        <div class="climate">
-          <div class="clim"><svg class="ic" aria-hidden="true"><use href="#i-wave"/></svg><b data-i18n="cli1_r">مدیترانه</b><span data-i18n="cli1">زمستان معتدل، تابستان آفتابی (والنسیا)</span></div>
-          <div class="clim"><svg class="ic spin" aria-hidden="true"><use href="#i-sun"/></svg><b data-i18n="cli2_r">جنوب</b><span data-i18n="cli2">گرم و بسیار آفتابی (مالاگا)</span></div>
-          <div class="clim"><svg class="ic" aria-hidden="true"><use href="#i-rain"/></svg><b data-i18n="cli3_r">شمال</b><span data-i18n="cli3">سرسبز و بارانی (بیلبائو)</span></div>
-          <div class="clim"><svg class="ic" aria-hidden="true"><use href="#i-mountain"/></svg><b data-i18n="cli4_r">مرکز</b><span data-i18n="cli4">تابستان گرم و خشک، زمستان خنک (مادرید)</span></div>
-          <div class="clim"><svg class="ic spin" aria-hidden="true"><use href="#i-sun"/></svg><b data-i18n="cli5_r">جزایر قناری</b><span data-i18n="cli5">۲۰ تا ۲۶ درجه در تمام سال</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ═══════════ STORIES ═══════════ -->
@@ -1139,7 +845,7 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
         <li><a href="https://wa.me/34614066200" target="_blank" rel="noopener"><span class="ch-ic"><svg class="ic" style="fill:currentColor;stroke:none" aria-hidden="true"><use href="#i-wa"/></svg></span><span><span class="ch-label" data-i18n="ch_wa_l">واتساپ رسمی</span><span class="ch-value" data-i18n="ch_wa">ارسال پیام در واتساپ</span></span></a></li>
         <li><a href="https://www.instagram.com/buendia_spain_group?igsh=Z2k1czh5MzU5bWE0" target="_blank" rel="noopener"><span class="ch-ic"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></span><span><span class="ch-label" data-i18n="ch_ig">اینستاگرام</span><span class="ch-value ltr">@buendia_spain_group</span></span></a></li>
         <li><a href="https://t.me/immigration2spain" target="_blank" rel="noopener"><span class="ch-ic"><svg class="ic" aria-hidden="true"><use href="#i-tg"/></svg></span><span><span class="ch-label" data-i18n="ch_tg">کانال تلگرام</span><span class="ch-value ltr">@immigration2spain</span></span></a></li>
-        <li><a href="mailto:info@buendiagroup.com"><span class="ch-ic"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span><span class="ch-label" data-i18n="ch_em">ایمیل</span><span class="ch-value ltr">info@buendiagroup.com</span></span></a></li>
+        <li><a href="mailto:Novarexium.info@gmail.com"><span class="ch-ic"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span><span class="ch-label" data-i18n="ch_em">ایمیل</span><span class="ch-value ltr">Novarexium.info@gmail.com</span></span></a></li>
       </ul>
     </div>
 
@@ -1201,7 +907,7 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
       <li><a href="https://www.instagram.com/buendia_spain_group?igsh=Z2k1czh5MzU5bWE0" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
       <li><a href="https://t.me/immigration2spain" target="_blank" rel="noopener" aria-label="Telegram"><svg class="ic" aria-hidden="true"><use href="#i-tg"/></svg></a></li>
       <li><a href="tel:+34614066200" aria-label="Phone"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></a></li>
-      <li><a href="mailto:info@buendiagroup.com" aria-label="Email"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+      <li><a href="mailto:Novarexium.info@gmail.com" aria-label="Email"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
     </ul>
     <p class="copy" data-i18n="copy">© ۲۰۲۶ گروه نوارکسیوم. کلیه حقوق محفوظ است.</p>
   </div>
@@ -1216,12 +922,12 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
 /* ═════════ English copy (Persian lives in the HTML) ═════════ */
 const EN = {
   skip:"Skip to main content", brand:"Novarexium Group",
-  nav_services:"Services", nav_journey:"How it works", nav_pathways:"Pathways", nav_career:"Work", nav_edu:"Study", nav_life:"Life in Spain", nav_faq:"FAQ",
+  crumb_home:"Home", nav_services:"Services", nav_journey:"How it works", nav_pathways:"Pathways", nav_career:"Work", nav_edu:"Study", nav_life:"Life in Spain", nav_faq:"FAQ",
   cta_short:"Free consultation",
   city_thr:"Tehran", city_mad:"Madrid", pass_l:"Passenger", pass_v:"Your family",
   hero_title:"Your future in Spain starts here",
   hero_desc:"Personal guidance on immigration, residency and careers in Spain for Iranian families and the Persian-speaking community — from getting your visa to finding a home and starting a business, we stay beside you.",
-  hero_cta1:"Book a free consultation", hero_cta2:"See residency pathways",
+  hero_cta1:"Book a free consultation", hero_cta2:"See residency pathways", hero_cta3:"Find a home in Madrid",
   tr1:"Certified legal advice", tr2:"Spanish lawyers on your case", tr3:"Schengen & EU visa specialists", tr4:"University admissions",
   hero_img_alt:"A family at the airport looking up at a departure board showing a flight to Madrid",
   st1:"successful cases", st2:"years of experience", st3:"success rate", st4:"countries served",
@@ -1341,6 +1047,7 @@ const t = k => (lang === 'en' ? EN : FA)[k];
 
 /* ── Hero title word split ── */
 function splitWords(el) {
+  if (!el) return [];
   el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i)
     .map(line => line.trim().split(/\s+/).map(w => `<span class="w">${w}</span>`).join(' '))
     .join('<br>');
@@ -1466,7 +1173,8 @@ $$('.qa').forEach(q => {
 
 /* ── Testimonials slider ── */
 (() => {
-  const slider = $('#slider'), slides = $$('.slide', slider), bars = $$('.s-bar', slider);
+  const slider = $('#slider'); if (!slider) return;
+  const slides = $$('.slide', slider), bars = $$('.s-bar', slider);
   const DUR = 6500; let i = 0, timer, paused = false, started = 0, left = DUR;
   slider.style.setProperty('--dur', DUR + 'ms');
   function go(n) {
@@ -1522,7 +1230,7 @@ function hideLoader() { loader.classList.add('is-done'); }
 
 let journeyMM;
 function buildJourney() {
-  if (!hasGsap) return;
+  if (!hasGsap || !$('#journey')) return;
   if (journeyMM) journeyMM.revert();
   journeyMM = gsap.matchMedia();
   journeyMM.add('(min-width: 1101px) and (prefers-reduced-motion: no-preference)', () => {
@@ -1544,7 +1252,7 @@ function buildJourney() {
 
 function runIntro() {
   hideLoader();
-  if (!hasGsap || reduce) { counters.forEach(el => { el._v = +el.dataset.to; renderCount(el); }); return; }
+  if (!hasGsap || reduce || !$('#hero')) { counters.forEach(el => { el._v = +el.dataset.to; renderCount(el); }); return; }
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
   tl.from('#heroTitle .w', { y: 40, opacity: 0, filter: 'blur(8px)', duration: 1, stagger: .08 })
     .from('[data-anim="hero"]', { y: 24, opacity: 0, duration: .9, stagger: .12 }, '-=.6')
@@ -1589,7 +1297,7 @@ if (hasGsap) {
     // Mouse tilt on the arch
     const arch = $('#arch');
     if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      $('#hero').addEventListener('pointermove', e => {
+      $('#hero')?.addEventListener('pointermove', e => {
         const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
         gsap.to(arch, { rotateY: x * 10, rotateX: -y * 8, duration: 1, ease: 'power2.out' });
         gsap.to('.flight', { x: x * -14, y: y * -10, duration: 1.2, ease: 'power2.out' });

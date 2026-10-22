@@ -63,6 +63,23 @@ h3 { font-size: 20px; font-weight: 700; color: var(--ink); line-height: 1.5; }
 .pill-btn:hover { box-shadow: inset 0 0 0 1.5px var(--saffron); }
 html[dir="ltr"] .back .ic { transform: scaleX(-1); }
 
+/* Main menu (same as the other pages) */
+.nav { display: flex; gap: 2px; }
+.nav a { position: relative; text-decoration: none; font-size: 15px; font-weight: 500; padding: 10px 13px; border-radius: 999px; color: var(--ink); white-space: nowrap; transition: background-color .2s; }
+.nav a:hover { background: var(--sand); }
+.nav a.nav-hl, .nav a[aria-current="page"] { color: var(--saffron-dk); font-weight: 700; }
+.menu-btn { display: none; padding: 0 12px; }
+.hdr .btn { min-height: 44px; padding: 0 22px; font-size: 15px; white-space: nowrap; }
+@media (max-width: 1100px) {
+  .nav { display: none; position: absolute; top: var(--hdr); inset-inline: 12px; background: var(--night); border-radius: 20px; padding: 12px; flex-direction: column; box-shadow: var(--sh-2); }
+  .nav.is-open { display: flex; }
+  .nav a { padding: 12px 16px; font-size: 16px; color: var(--ivory); }
+  .nav a:hover { background: rgba(255,255,255,.1); }
+  .nav a.nav-hl, .nav a[aria-current="page"] { color: var(--saffron-2); }
+  .menu-btn { display: inline-flex; }
+}
+@media (max-width: 640px) { .hdr .btn { display: none; } }
+
 /* Buttons */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 28px; border-radius: 999px; font-size: 16px; font-weight: 700; text-decoration: none; cursor: pointer; border: 0; transition: transform .2s var(--ease), box-shadow .3s, background-color .2s; }
 .btn:active { transform: scale(.97); }
@@ -74,11 +91,22 @@ html[dir="ltr"] .back .ic { transform: scaleX(-1); }
 .btn[disabled] { opacity: .65; cursor: progress; }
 
 /* Hero */
-.h-hero { background: linear-gradient(180deg, #1C1511, #3B2E26 70%, #5B4537); color: #E9DED2; padding: 64px 0 120px; position: relative; overflow: hidden; }
+.h-hero { background: #141a2c; isolation: isolate; color: #E9DED2; padding: 64px 0 120px; position: relative; overflow: hidden; }
+.h-hero::before { content: ""; position: absolute; inset: -40px; z-index: -2; background: url(madrid-apartments.jpg) center / cover; filter: blur(40px) brightness(.38) saturate(1.1); }
+.h-bg { position: absolute; top: 0; bottom: 0; left: 0; height: 100%; aspect-ratio: 1920 / 1183; max-width: 100%; z-index: -1; pointer-events: none;
+  background: linear-gradient(to top, rgba(255,128,64,.2), rgba(186,85,140,.1) 45%, rgba(0,0,0,0) 70%), url(madrid-apartments.jpg) center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 160px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 160px), transparent); }
+.h-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to left, rgba(20,26,44,.75), rgba(20,26,44,.3) 40%, rgba(20,26,44,0) 65%); }
+html[dir="ltr"] .h-bg { left: auto; right: 0; -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 160px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 160px), transparent); }
+html[dir="ltr"] .h-bg::after { background: linear-gradient(to right, rgba(20,26,44,.75), rgba(20,26,44,.3) 40%, rgba(20,26,44,0) 65%); }
+.h-hero .h-art { display: none; }
+.h-hero .h-grid { grid-template-columns: minmax(0, min(470px, 100%)); justify-content: start; }
+.h-hero { min-height: 640px; display: flex; align-items: center; }
+.h-hero > .wrap { width: 100%; }
 .h-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 80px; background: var(--ivory); border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
 .h-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; position: relative; z-index: 1; }
-.h-hero h1 { color: var(--ivory); font-size: clamp(32px, 4vw, 52px); margin-bottom: 16px; }
-.h-hero .lead { font-size: 18.5px; color: #D9CBBD; max-width: 54ch; margin-bottom: 28px; }
+.h-hero h1 { color: var(--ivory); text-shadow: 0 2px 18px rgba(0,0,0,.45); font-size: clamp(32px, 4vw, 52px); margin-bottom: 16px; }
+.h-hero .lead { font-size: 18.5px; color: #F1E8DC; text-shadow: 0 1px 10px rgba(0,0,0,.55); max-width: 54ch; margin-bottom: 28px; }
 .h-steps { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
 .h-steps li { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(255,255,255,.15); font-size: 14.5px; }
 .h-steps b { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: var(--saffron-2); color: var(--night); font-size: 12.5px; }
@@ -234,25 +262,36 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
   <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></symbol>
   <symbol id="i-wa" viewBox="0 0 32 32"><path d="M16.05 2.5a13.45 13.45 0 0 0-11.4 20.6l-2.1 6.3 6.5-2.1A13.45 13.45 0 1 0 16.05 2.5zm0 24.5c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-4.4 1.4 1.4-4.2-.3-.5A11.2 11.2 0 1 1 16.05 27.1zm6.2-8.5c-.3-.2-2-.1-2.3-.1-.3 0-.5.1-.7.4-.2.3-.9 1.1-1.1 1.3-.2.3-.5.3-.8.2-.3-.1-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.4-.2-.3 0-.5.1-.6.2-.2.4-.4.5-.6.2-.2.2-.4.3-.6.1-.3 0-.5-.1-.7s-1.1-2.6-1.5-3.6c-.4-1-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8 0 2.2 1.6 4.4 1.9 4.7.2.3 3.2 4.9 7.7 6.8 1.1.5 1.9.7 2.6.9 1.1.3 2 .3 2.8.2.8-.1 2.6-1.1 2.9-2.1.3-1 .3-1.9.2-2.1-.2-.2-.5-.3-.9-.4z"/></symbol>
 </svg>
 
-<header class="site-header">
+<header class="site-header" id="hdr">
   <div class="wrap hdr">
-    <a class="brand" href="index.html" aria-label="Novarexium Group">
+    <a class="brand" href="index.html" aria-label="Novarexium Group — Global Vision, Lasting Value">
       <span class="mark"><svg aria-hidden="true"><use href="#logo-mark"/></svg></span>
       <span class="brand-txt"><span class="brand-name">NOVAREXIUM</span><span class="brand-sub">GROUP</span></span>
     </a>
+    <nav class="nav" id="nav" aria-label="منوی اصلی" data-i18n-aria="a_nav">
+      <a href="services.html" data-i18n="nav_services">خدمات</a>
+      <a href="pathways.html" data-i18n="nav_pathways">مسیرهای اقامت</a>
+      <a href="career.html" data-i18n="nav_career">کار و حقوق</a>
+      <a href="education.html" data-i18n="nav_edu">تحصیل</a>
+      <a href="life.html" data-i18n="nav_life">زندگی در اسپانیا</a>
+      <a href="housing.html" class="nav-hl" aria-current="page" data-i18n="nav_housing">پیدا کردن خانه</a>
+    </nav>
     <div class="hdr-actions">
       <button class="pill-btn" id="langBtn" type="button" aria-label="Switch to English"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span id="langLabel">EN</span></button>
-      <a class="pill-btn back" href="index.html" aria-label="صفحه اصلی" data-i18n-aria="back"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="t" data-i18n="back">صفحه اصلی</span></a>
+      <a class="btn btn--gold" href="index.html#consult" data-i18n="cta_short">مشاوره رایگان</a>
+      <button class="pill-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="منو" data-i18n-aria="a_menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
 
 <main>
 <section class="h-hero">
+  <div class="h-bg" aria-hidden="true"></div>
   <div class="wrap h-grid">
     <div>
       <h1 class="display" data-i18n="h_title">خانه‌ای در مادرید، به اندازه نیاز خانواده شما</h1>
@@ -625,11 +664,13 @@ html[dir="ltr"] .wa-float { left: auto; right: 22px; }
     </a>
     <a class="wa" data-wa="wa_housing" href="https://wa.me/34614066200" target="_blank" rel="noopener"><span data-i18n="ft_q">سوالی دارید؟ در واتساپ بپرسید</span> <span class="ltr">+34 614 066 200</span></a>
   </div>
+  <p class="wrap" style="font-size:11.5px;opacity:.6;margin-top:10px">Photo: Cuatro Torres, Madrid, by Luis Fernández García (Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" style="color:inherit">CC BY-SA 4.0</a>)</p>
 </footer>
 <a class="wa-float" data-wa="wa_housing" href="https://wa.me/34614066200" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#i-wa"/></svg></a>
 
 <script>
 const EN = {
+  nav_services:"Services", nav_pathways:"Pathways", nav_career:"Work", nav_edu:"Study", nav_life:"Life in Spain", nav_housing:"Find a home", cta_short:"Free consultation", a_nav:"Main menu", a_menu:"Menu",
   back:"Home", a_ad_dec:"Fewer adults", a_ad_inc:"More adults", a_ch_dec:"Fewer children", a_ch_inc:"More children",
   mv_choose:"Choose a month", mv_asap:"As soon as possible", upd:"Last updated:",
   wa_housing:"Hello Novarexium, I have a question about finding a home in Madrid.",
@@ -876,6 +917,12 @@ $$('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('is-in'));
 let saved = null; try { saved = localStorage.getItem('bg-lang'); } catch (e) {}
 const qLang = new URLSearchParams(location.search).get('lang');
 if ((qLang || saved) === 'en') setLang('en'); else { renderCounters(); updateNav(); buildMonths(); renderUpdated(); renderWa(); }
+
+/* Mobile menu */
+(() => {
+  const nav = document.getElementById('nav'), btn = document.getElementById('menuBtn');
+  btn.addEventListener('click', () => { const o = nav.classList.toggle('is-open'); btn.setAttribute('aria-expanded', o); });
+})();
 </script>
 <style>.pv-badge{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:9999;background:#2A211C;color:#D9B68F;font:600 12.5px/1 Vazirmatn,system-ui,sans-serif;padding:7px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);pointer-events:none;letter-spacing:.02em}</style>
 <div class="pv-badge" aria-hidden="true">پیش‌نمایش · Preview</div></body>
